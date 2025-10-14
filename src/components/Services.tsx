@@ -55,47 +55,56 @@ const Services = () => {
           {/* Clean 5-Step Process */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {/* Attract */}
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-purple-600 mb-3">Attract</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                <Search className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-purple-600 mb-3 text-center">Attract</h3>
+              <p className="text-gray-600 leading-relaxed text-sm text-center">
                 Drive organic traffic to your website with strategic keyword optimization, engaging content, and technical SEO enhancements.
               </p>
             </div>
 
             {/* UpSell */}
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-purple-600 mb-3">UpSell</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-purple-600 mb-3 text-center">UpSell</h3>
+              <p className="text-gray-600 leading-relaxed text-sm text-center">
                 Automate your sales and marketing processes to maximize conversions. AI-driven chatbots engage customers, while personalized automation nurtures leads through targeted email sequences.
               </p>
             </div>
 
             {/* Repeat */}
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-purple-600 mb-3">Repeat</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                <Smartphone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-purple-600 mb-3 text-center">Repeat</h3>
+              <p className="text-gray-600 leading-relaxed text-sm text-center">
                 Stay in control of your website anytime, anywhere with a mobile-friendly management app. Update content, track analytics, and respond to leads instantly, ensuring continuous engagement.
               </p>
             </div>
 
             {/* Sell */}
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-orange-500 flex items-center justify-center">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
                 <Magnet className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-purple-600 mb-3">Sell</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-2xl font-bold text-purple-600 mb-3 text-center">Sell</h3>
+              <p className="text-gray-600 leading-relaxed text-sm text-center">
                 Once visitors arrive, convert them into potential customers with high-converting lead capture tools.
               </p>
             </div>
 
             {/* Ascend */}
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-500 flex items-center justify-center">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
                 <Globe className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-purple-600 mb-3">Ascend</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-2xl font-bold text-purple-600 mb-3 text-center">Ascend</h3>
+              <p className="text-gray-600 leading-relaxed text-sm text-center">
                 A well-designed website enhances trust and keeps users engaged. With modern UI/UX, fast performance, and conversion-focused design, your site becomes an effective sales tool.
               </p>
             </div>

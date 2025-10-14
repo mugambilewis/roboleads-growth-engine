@@ -1,8 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const texts = [
+    "automating your business with AI.",
+    "generating leads 24/7.",
+    "ranking higher on Google.",
+    "effortless lead capture and sales.",
+    "a stunning, mobile-friendly website."
+  ];
+
+  useEffect(() => {
+    const currentString = texts[currentIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (currentText.length < currentString.length) {
+          setCurrentText(currentString.slice(0, currentText.length + 1));
+        } else {
+          setTimeout(() => setIsDeleting(true), 2000); // Wait 2 seconds before deleting
+        }
+      } else {
+        if (currentText.length > 0) {
+          setCurrentText(currentText.slice(0, -1));
+        } else {
+          setIsDeleting(false);
+          setCurrentIndex((prev) => (prev + 1) % texts.length);
+        }
+      }
+    }, isDeleting ? 50 : 100); // Faster deletion, slower typing
+
+    return () => clearTimeout(timeout);
+  }, [currentText, currentIndex, isDeleting, texts]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
@@ -20,9 +56,12 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-8 relative z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-            You're one step away from{" "}
-            <span className="gradient-text">automating your business with AI.</span>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+            <div>You're one step away from</div>
+            <div className="gradient-text min-h-[1.2em]">
+              {currentText}
+              <span className="animate-pulse">|</span>
+            </div>
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto leading-relaxed">
