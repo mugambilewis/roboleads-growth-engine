@@ -149,6 +149,20 @@ All colors MUST be HSL.
     animation: gradient-shift 8s ease infinite;
   }
 
+  /* Marquee animation for trust bar */
+  .animate-marquee {
+    animation: marquee-scroll 20s linear infinite;
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
   @keyframes gradient-shift {
     0%, 100% {
       background-position: 0% 50%;
