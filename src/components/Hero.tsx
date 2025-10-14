@@ -20,27 +20,18 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-8 relative z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm text-muted-foreground mb-4">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span>The all-in-one automation operating system</span>
-          </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-            Automate Growth.{" "}
-            <span className="gradient-text">Scale Without Stress.</span>
+            You're one step away from{" "}
+            <span className="gradient-text">automating your business with AI.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From CRM setup to AI-powered automation, Roboleads helps your business scale faster, smarter, and stress-free.
+          <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto leading-relaxed">
+            Maximize your online potential with our expert SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. Plus, stay in control on the go with our mobile app for seamless management of website leads and clients.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="animated-gradient glow-effect text-lg px-8 py-6">
-              Start with Roboleads
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-border hover:bg-card">
-              Explore Features
+            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-8 py-6 rounded-lg">
+              GET A FREE QUOTE TODAY!
             </Button>
           </div>
         </div>
