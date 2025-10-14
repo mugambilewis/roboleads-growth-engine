@@ -31,29 +31,32 @@ const Testimonials = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.author}
-              className="gradient-border p-8"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="relative z-10">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-foreground/90 mb-6 leading-relaxed italic">
-                  "{testimonial.quote}"
-                </p>
-                <div>
-                  <p className="font-bold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+        {/* Marquee carousel */}
+        <div className="group relative overflow-hidden max-w-6xl mx-auto">
+          <div
+            className="flex w-max items-stretch gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
+          >
+            {[...testimonials, ...testimonials].map((testimonial, idx) => (
+              <div key={`${testimonial.author}-${idx}`} className="min-w-[320px] md:min-w-[420px]">
+                <div className="gradient-border p-8 h-full">
+                  <div className="relative z-10">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                      ))}
+                    </div>
+                    <p className="text-foreground/90 mb-6 leading-relaxed italic">
+                      "{testimonial.quote}"
+                    </p>
+                    <div>
+                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
