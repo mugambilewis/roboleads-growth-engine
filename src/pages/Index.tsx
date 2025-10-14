@@ -7,6 +7,7 @@ import TechStack from "@/components/TechStack";
 import CaseStudies from "@/components/CaseStudies";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
+import ReadyToBegin from "@/components/ReadyToBegin";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,11 +17,13 @@ const Index = () => {
       <Hero />
       <TrustBar />
       <WhoWeAre />
+      <Testimonials />
       <Services />
       <TechStack />
       <CaseStudies />
-      <Testimonials />
+      
       <CTASection />
+      <ReadyToBegin />
       <Footer />
     </div>
   );

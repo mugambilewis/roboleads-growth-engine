@@ -1,70 +1,117 @@
-import { Database, Workflow, Bot, TrendingUp, Cog, GraduationCap } from "lucide-react";
+import { Search, Zap, Smartphone, Magnet, Globe, ArrowRight, ArrowDown, ArrowUp } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Database,
-      title: "Custom CRM & Dashboard Systems",
-      description: "End-to-end CRM setup with white-label branding and automation logic."
+      icon: Search,
+      title: "Attract",
+      description: "Drive organic traffic to your website with strategic keyword optimization, engaging content, and technical SEO enhancements.",
+      color: "from-blue-400 to-purple-500",
+      position: "top-left"
     },
     {
-      icon: Workflow,
-      title: "Funnel & Workflow Automation",
-      description: "Streamline leads, booking flows, and customer onboarding automatically."
+      icon: Zap,
+      title: "UpSell",
+      description: "Automate your sales and marketing processes to maximize conversions. AI-driven chatbots engage customers, while personalized automation nurtures leads through targeted email sequences.",
+      color: "from-green-400 to-blue-500",
+      position: "top-center"
     },
     {
-      icon: Bot,
-      title: "AI Chatbots & Smart Messaging",
-      description: "Conversational bots for WhatsApp, web, or email to nurture leads 24/7."
+      icon: Smartphone,
+      title: "Repeat",
+      description: "Stay in control of your website anytime, anywhere with a mobile-friendly management app. Update content, track analytics, and respond to leads instantly, ensuring continuous engagement.",
+      color: "from-purple-400 to-pink-500",
+      position: "top-right"
     },
     {
-      icon: TrendingUp,
-      title: "Sales & Marketing Systems",
-      description: "Seamless integration of ads, analytics, and conversion tracking."
+      icon: Magnet,
+      title: "Sell",
+      description: "Once visitors arrive, convert them into potential customers with high-converting lead capture tools.",
+      color: "from-yellow-400 to-orange-500",
+      position: "bottom-left"
     },
     {
-      icon: Cog,
-      title: "Operational Automation Pods",
-      description: "Manage tasks, reports, and pipelines from a single automated hub."
-    },
-    {
-      icon: GraduationCap,
-      title: "Training & System Support",
-      description: "Ready-to-use SOPs, tutorials, and dashboards for your internal teams."
+      icon: Globe,
+      title: "Ascend",
+      description: "A well-designed website enhances trust and keeps users engaged. With modern UI/UX, fast performance, and conversion-focused design, your site becomes an effective sales tool.",
+      color: "from-indigo-400 to-purple-500",
+      position: "bottom-right"
     }
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 relative">
+    <section id="services" className="py-24 md:py-32 relative bg-white">
       <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            Everything You Need to{" "}
-            <span className="gradient-text">Automate, Launch, and Scale.</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-600">
+            Smart Websites for Businesses
           </h2>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            We build high-performing online presences that maximize your potential. From attracting new visitors to converting them into loyal customers, our solutions cover every stage of your digital journey.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={service.title}
-                className="gradient-border p-8 hover:scale-105 transition-all duration-300 cursor-pointer group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Clean 5-Step Process */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {/* Attract */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-purple-600 mb-3">Attract</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Drive organic traffic to your website with strategic keyword optimization, engaging content, and technical SEO enhancements.
+              </p>
+            </div>
+
+            {/* UpSell */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-purple-600 mb-3">UpSell</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Automate your sales and marketing processes to maximize conversions. AI-driven chatbots engage customers, while personalized automation nurtures leads through targeted email sequences.
+              </p>
+            </div>
+
+            {/* Repeat */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-purple-600 mb-3">Repeat</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Stay in control of your website anytime, anywhere with a mobile-friendly management app. Update content, track analytics, and respond to leads instantly, ensuring continuous engagement.
+              </p>
+            </div>
+
+            {/* Sell */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-orange-500 flex items-center justify-center">
+                <Magnet className="w-6 h-6 text-white" />
               </div>
-            );
-          })}
+              <h3 className="text-2xl font-bold text-purple-600 mb-3">Sell</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Once visitors arrive, convert them into potential customers with high-converting lead capture tools.
+              </p>
+            </div>
+
+            {/* Ascend */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-500 flex items-center justify-center">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-purple-600 mb-3">Ascend</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                A well-designed website enhances trust and keeps users engaged. With modern UI/UX, fast performance, and conversion-focused design, your site becomes an effective sales tool.
+              </p>
+            </div>
+          </div>
+
+          {/* Simple Flow Indicators */}
+          <div className="flex justify-center items-center mt-8 space-x-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+              <div className="w-8 h-0.5 bg-purple-600"></div>
+              <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+              <div className="w-8 h-0.5 bg-purple-600"></div>
+              <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+            </div>
+            <span className="text-sm text-gray-500 font-medium">Complete Digital Journey</span>
+          </div>
         </div>
       </div>
     </section>
