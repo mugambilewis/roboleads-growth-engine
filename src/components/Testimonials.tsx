@@ -24,9 +24,9 @@ const Testimonials = () => {
 
   return (
     <section className="py-24 md:py-32 bg-card/30">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
         </div>
@@ -37,20 +37,20 @@ const Testimonials = () => {
             className="flex w-max items-stretch gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
           >
             {[...testimonials, ...testimonials].map((testimonial, idx) => (
-              <div key={`${testimonial.author}-${idx}`} className="min-w-[320px] md:min-w-[420px]">
-                <div className="gradient-border p-8 h-full">
-                  <div className="relative z-10">
+              <div key={`${testimonial.author}-${idx}`} className="w-[340px] md:w-[380px] flex-shrink-0">
+                <div className="gradient-border p-6 md:p-8 h-full flex flex-col">
+                  <div className="relative z-10 flex flex-col flex-grow">
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-primary text-primary" />
                       ))}
                     </div>
-                    <p className="text-foreground/90 mb-6 leading-relaxed italic">
+                    <p className="text-foreground/90 mb-6 leading-relaxed text-base md:text-lg flex-grow">
                       "{testimonial.quote}"
                     </p>
-                    <div>
-                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <div className="mt-auto">
+                      <p className="font-bold text-foreground">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>

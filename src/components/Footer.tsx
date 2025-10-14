@@ -3,7 +3,7 @@ import { Linkedin, Twitter, Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="border-t border-border py-12 bg-card/30">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold gradient-text mb-4">Roboleads</h3>

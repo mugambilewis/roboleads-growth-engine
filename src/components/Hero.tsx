@@ -18,14 +18,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background z-0" />
       
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10 text-center">
+      <div className="container mx-auto px-8 relative z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm text-muted-foreground mb-4">
             <Sparkles className="w-4 h-4 text-primary" />
             <span>The all-in-one automation operating system</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
             Automate Growth.{" "}
             <span className="gradient-text">Scale Without Stress.</span>
           </h1>

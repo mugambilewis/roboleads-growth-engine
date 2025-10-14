@@ -36,9 +36,9 @@ const Services = () => {
 
   return (
     <section id="services" className="py-24 md:py-32 relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             Everything You Need to{" "}
             <span className="gradient-text">Automate, Launch, and Scale.</span>
           </h2>

@@ -1,9 +1,9 @@
 const WhoWeAre = () => {
   return (
     <section id="solutions" className="py-24 md:py-32">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-8">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-4xl md:text-6xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             Automation Made Human —{" "}
             <span className="gradient-text">Built for Modern Business.</span>
           </h2>
