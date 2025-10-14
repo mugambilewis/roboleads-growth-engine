@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const CTASection = () => {
+const FAQSection = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
   const faqItems = [
@@ -89,4 +89,4 @@ const CTASection = () => {
   );
 };
 
-export default CTASection;
+export default FAQSection;

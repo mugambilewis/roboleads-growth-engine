@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const TechStack = () => {
+const WhyChooseUs = () => {
   const features = [
     {
       title: "AI-Powered Marketing",
@@ -113,4 +113,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default WhyChooseUs;

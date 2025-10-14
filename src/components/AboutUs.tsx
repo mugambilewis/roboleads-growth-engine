@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const CaseStudies = () => {
+const AboutUs = () => {
   return (
     <section id="case-studies" className="py-24 md:py-32">
       <div className="container mx-auto px-8">
@@ -91,4 +91,4 @@ const CaseStudies = () => {
   );
 };
 
-export default CaseStudies;
+export default AboutUs;

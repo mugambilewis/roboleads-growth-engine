@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import WhoWeAre from "@/components/WhoWeAre";
+import ServicesTabs from "@/components/ServicesTabs";
 import Services from "@/components/Services";
-import TechStack from "@/components/TechStack";
-import CaseStudies from "@/components/CaseStudies";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import AboutUs from "@/components/AboutUs";
 import Testimonials from "@/components/Testimonials";
-import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/FAQSection";
 import ReadyToBegin from "@/components/ReadyToBegin";
 import Footer from "@/components/Footer";
 
@@ -16,13 +16,13 @@ const Index = () => {
       <Navbar />
       <Hero />
       <TrustBar />
-      <WhoWeAre />
+      <ServicesTabs />
       <Testimonials />
       <Services />
-      <TechStack />
-      <CaseStudies />
+      <WhyChooseUs />
+      <AboutUs />
       
-      <CTASection />
+      <FAQSection />
       <ReadyToBegin />
       <Footer />
     </div>

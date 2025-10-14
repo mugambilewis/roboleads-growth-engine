@@ -26,7 +26,7 @@ const Navbar = () => {
               Contact
             </a>
             <Button className="animated-gradient glow-effect">
-              Book a Demo
+             BOOK APPOINTMENT
             </Button>
           </div>
 
@@ -34,6 +34,8 @@ const Navbar = () => {
           <button
             className="md:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
+            title="Open navigation menu"
+            aria-label="Open navigation menu"
           >
             <Menu size={24} />
           </button>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const WhoWeAre = () => {
+const ServicesTabs = () => {
   const [activeTab, setActiveTab] = useState("SEO");
 
   const tabs = [
@@ -110,4 +110,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default ServicesTabs;
