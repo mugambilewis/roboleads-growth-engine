@@ -8,7 +8,6 @@ import AboutUs from "@/components/AboutUs";
 import Testimonials from "@/components/Testimonials";
 import FAQSection from "@/components/FAQSection";
 import ReadyToBegin from "@/components/ReadyToBegin";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -24,7 +23,7 @@ const Index = () => {
       
       <FAQSection />
       <ReadyToBegin />
-      <Footer />
+     
     </div>
   );
 };

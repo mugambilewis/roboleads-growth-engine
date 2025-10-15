@@ -8,6 +8,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const texts = [
     "automating your business with AI.",
     "generating leads 24/7.",
@@ -40,36 +41,28 @@ const Hero = () => {
   }, [currentText, currentIndex, isDeleting, texts]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ backgroundColor: '#e8f1fd' }}>
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.4
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background z-0" />
+      
+      <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(to bottom, rgba(232, 241, 253, 0.5), rgba(232, 241, 253, 0.8), #e8f1fd)' }} />
       
       {/* Content */}
       <div className="container mx-auto px-8 relative z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ color: '#092C5D' }}>
             <div>You're one step away from</div>
-            <div className="gradient-text min-h-[1.2em]">
+            <div className="min-h-[1.2em]" style={{ color: '#00B3A4' }}>
               {currentText}
               <span className="animate-pulse">|</span>
             </div>
           </h1>
           
-          <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed" style={{ color: '#092C5D', opacity: 0.9 }}>
             Maximize your online potential with our expert SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. Plus, stay in control on the go with our mobile app for seamless management of website leads and clients.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-8 py-6 rounded-lg">
+            <Button size="lg" className="text-black font-bold text-lg px-8 py-6 rounded-lg" style={{ backgroundColor: '#00B3A4' }}>
               GET A FREE QUOTE TODAY!
             </Button>
           </div>
@@ -77,8 +70,8 @@ const Hero = () => {
       </div>
 
       {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'rgba(0, 179, 164, 0.2)' }} />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'rgba(0, 179, 164, 0.2)', animationDelay: '1s' }} />
     </section>
   );
 };
