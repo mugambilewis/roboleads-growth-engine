@@ -2,34 +2,34 @@ import { Button } from "@/components/ui/button";
 
 const AboutUs = () => {
   return (
-    <section id="case-studies" className="py-24 md:py-32">
+    <section id="about" className="py-24 md:py-32 bg-[#e8f1fd]">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Side - Content */}
           <div className="order-1">
             <div className="space-y-6">
               <div>
-                <p className="text-sm text-muted-foreground mb-2">About Us</p>
-                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
+                <p className="text-sm text-[#00B3A4] mb-2">About Us</p>
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-[#092C5D]">
                   WHO WE ARE
                 </h2>
-                <p className="text-xl text-muted-foreground mb-6">
+                <p className="text-xl text-[#092C5D] mb-6">
                   Building the Future of Smart Websites
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-lg text-foreground/80 leading-relaxed">
+                <p className="text-lg text-[#092C5D]/80 leading-relaxed">
                   At Roboleads, we specialize in creating AI-powered, SEO-optimized, and automation-driven websites that work for you 24/7. We believe that a website should be more than just an online presence—it should be a powerful business tool that attracts leads, automates processes, and drives revenue effortlessly.
                 </p>
                 
-                <p className="text-lg text-foreground/80 leading-relaxed">
+                <p className="text-lg text-[#092C5D]/80 leading-relaxed">
                   With years of experience in web design, digital marketing, and AI automation, our team is dedicated to helping businesses scale online without the hassle of traditional web development.
                 </p>
               </div>
 
               <div className="pt-4">
-                <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-3 rounded-lg">
+                <Button className="bg-[#00B3A4] hover:bg-[#00B3A4] /90 text-[#092C5D] font-bold px-8 py-3 rounded-lg">
                   MORE ABOUT US
                 </Button>
               </div>

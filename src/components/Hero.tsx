@@ -62,16 +62,15 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="text-black font-bold text-lg px-8 py-6 rounded-lg" style={{ backgroundColor: '#00B3A4' }}>
-              GET A FREE QUOTE TODAY!
+            <Button size="lg" className="text-[#092C5D] font-bold text-lg px-8 py-6 rounded-lg" style={{ backgroundColor: '#00B3A4' }}>
+              GET A FREE AUDIT TODAY!
             </Button>
           </div>
         </div>
       </div>
 
       {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'rgba(0, 179, 164, 0.2)' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'rgba(0, 179, 164, 0.2)', animationDelay: '1s' }} />
+     
     </section>
   );
 };

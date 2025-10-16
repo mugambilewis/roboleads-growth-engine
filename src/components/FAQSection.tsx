@@ -32,7 +32,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative overflow-hidden bg-white">
+    <section id="contact" className="py-24 md:py-32 relative overflow-hidden bg-[#092C5D]">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-60 transform -translate-x-16 -translate-y-16"></div>
@@ -44,11 +44,11 @@ const FAQSection = () => {
       <div className="container mx-auto px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div>
-            <p className="text-primary text-sm mb-2">About Us</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+            <p className="text-[#00B3A4] text-sm mb-2">About Us</p>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Smart Websites, Smarter Growth
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-white leading-relaxed">
               Your All-in-One Solution for SEO, Lead Capturing, Automation & More
             </p>
           </div>
@@ -56,21 +56,21 @@ const FAQSection = () => {
           {/* FAQ Accordion */}
           <div className="space-y-4 mt-12">
             {faqItems.map((item, index) => (
-              <div key={index} className="bg-yellow-400 rounded-lg overflow-hidden">
+              <div key={index} className="bg-[#e8f1fd] rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-yellow-500 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white transition-colors"
                 >
-                  <span className="text-black font-medium text-lg">{item.question}</span>
+                  <span className="text-[#092C5D] font-medium text-lg">{item.question}</span>
                   <ChevronDown 
-                    className={`w-5 h-5 text-black transition-transform ${
+                    className={`w-5 h-5 text-[#00B3A4] transition-transform ${
                       openAccordion === index ? 'rotate-180' : ''
                     }`} 
                   />
                 </button>
                 {openAccordion === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-black/80 leading-relaxed">{item.answer}</p>
+                  <div className="px-6 pb-4 bg-white">
+                    <p className="text-[#092C5D]  leading-relaxed">{item.answer}</p>
                   </div>
                 )}
               </div>
@@ -79,7 +79,7 @@ const FAQSection = () => {
 
           {/* Contact CTA */}
           <div className="pt-8">
-            <p className="text-gray-800 text-lg">
+            <p className="text-white text-lg">
               Have more questions in mind? Contact us and our team will answer all your questions.
             </p>
           </div>

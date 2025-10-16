@@ -2,22 +2,22 @@ import { Button } from "@/components/ui/button";
 
 const ReadyToBegin = () => {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-8 md:py-8 bg-[#e8f1fd]">
       <div className="container mx-auto px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Heading with Stylized "BEGIN?" */}
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#092C5D]">
               READY TO
             </h2>
             <div className="relative inline-block">
-              <div className="bg-gradient-to-r from-purple-600 via-purple-700 to-pink-500 transform -rotate-2 px-8 py-4 rounded-lg shadow-lg">
+              <div className="bg-gradient-to-r from-[#092C5D] via-[#062249] to-[#03142c] transform -rotate-2 px-8 py-4 rounded-lg shadow-lg">
                 <span className="text-white font-bold text-4xl md:text-6xl lg:text-7xl">
                   BEGIN?
                 </span>
               </div>
               {/* Additional ribbon effect */}
-              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-r from-purple-800 to-pink-600 transform -rotate-2 rounded-lg opacity-30"></div>
+              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-r from-white to-[#96baea] transform -rotate-2 rounded-lg opacity-30"></div>
             </div>
           </div>
 
@@ -28,7 +28,7 @@ const ReadyToBegin = () => {
 
           {/* CTA Button */}
           <div className="pt-6">
-            <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="bg-[#00B3A4] hover:bg-[#00B3A4]/90 text-[#092C5D] font-bold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
               BOOK APPOINTMENT
             </Button>
           </div>

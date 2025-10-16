@@ -40,13 +40,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 relative bg-white">
+    <section id="services" className="py-24 md:py-32 relative bg-[#092C5D]">
       <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-600">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-[#00B3A4]">
             Smart Websites for Businesses
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
             We build high-performing online presences that maximize your potential. From attracting new visitors to converting them into loyal customers, our solutions cover every stage of your digital journey.
           </p>
         </div>

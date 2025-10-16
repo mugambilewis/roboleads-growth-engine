@@ -4,65 +4,250 @@ import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 /**
  * Integrations Component
  * 
- * A single-viewport animated visualization of integration cards
- * with orbital motion, connector lines, and parallax effects.
+ * Desktop: Animated orbital visualization with cards rotating around center
+ * Mobile: Static vertical layout with category groups
  * 
  * Tuning Parameters:
  * - ORBIT_RADIUS: Base radius for card orbit (line 18)
- * - ENTRANCE_DURATION: Stagger timing for card entrance (line 21)
- * - ORBIT_DURATION: Speed of orbital motion (line 24)
- * - PULSE_DURATION: Speed of node pulsing (line 27)
- * - PARALLAX_STRENGTH: Pointer parallax sensitivity (line 30)
+ * - ORBIT_DURATION: Speed of orbital motion (line 21)
+ * - PARALLAX_STRENGTH: Pointer parallax sensitivity (line 24)
+ * - CYCLE_DURATION: Fade in/out cycle timing (line 27)
  */
 
 // TUNING: Adjust orbital motion radius
-const ORBIT_RADIUS = 180;
-
-// TUNING: Adjust entrance animation timing
-const ENTRANCE_DURATION = 0.6;
-const STAGGER_DELAY = 0.08;
+const ORBIT_RADIUS = 220;
 
 // TUNING: Adjust orbital motion speed
 const ORBIT_DURATION = 20;
 
-// TUNING: Adjust pulse animation speed
-const PULSE_DURATION = 2;
-
 // TUNING: Adjust parallax movement strength
 const PARALLAX_STRENGTH = 20;
+
+// TUNING: Cycle duration for fade in/out effect
+const CYCLE_DURATION = 8;
+const FADE_OUT_START = 0.6;
 
 interface Integration {
   id: number;
   label: string;
+  icon?: string;
+}
+
+interface CategoryGroup {
+  category: string;
+  integrations: Integration[];
+}
+
+// Mobile static layout data
+const categoryGroups: CategoryGroup[] = [
+  {
+    category: 'Vulnerability Management',
+    integrations: [
+      { id: 1, label: 'Nessus' },
+      { id: 2, label: 'Qualys' },
+      { id: 3, label: 'Rapid7' },
+      { id: 4, label: 'Tenable' },
+      { id: 5, label: 'Hackuity' },
+    ],
+  },
+  {
+    category: 'Endpoint Security',
+    integrations: [
+      { id: 6, label: 'VMware Carbon Black' },
+      { id: 7, label: 'Cisco' },
+      { id: 8, label: 'Crowdstrike' },
+      { id: 9, label: 'Rapid7' },
+      { id: 10, label: 'Malwarebytes' },
+    ],
+  },
+  {
+    category: 'Collaboration Tools',
+    integrations: [
+      { id: 11, label: 'Jira' },
+      { id: 12, label: 'Slack' },
+      { id: 13, label: 'Teams' },
+      { id: 14, label: 'Google' },
+      { id: 15, label: 'Zoom' },
+    ],
+  },
+  {
+    category: 'Identity & Access Tools',
+    integrations: [
+      { id: 16, label: 'Okta' },
+      { id: 17, label: 'Azure' },
+      { id: 18, label: 'Duo' },
+      { id: 19, label: 'Google Workspace' },
+      { id: 20, label: 'Microsoft' },
+    ],
+  },
+  {
+    category: 'Cloud Infrastructure',
+    integrations: [
+      { id: 21, label: 'AWS' },
+      { id: 22, label: 'GCP' },
+      { id: 23, label: 'Azure' },
+      { id: 24, label: 'DigitalOcean' },
+      { id: 25, label: 'Oracle' },
+    ],
+  },
+  {
+    category: 'Human Resources',
+    integrations: [
+      { id: 26, label: 'Workday' },
+      { id: 27, label: 'BambooHR' },
+    ],
+  },
+  {
+    category: 'Mobile Device Management',
+    integrations: [
+      { id: 28, label: 'Jamf' },
+      { id: 29, label: 'Qualys' },
+      { id: 30, label: 'Rapid7' },
+      { id: 31, label: 'Tenable' },
+      { id: 32, label: 'Hackuity' },
+    ],
+  },
+  {
+    category: 'Code Management',
+    integrations: [
+      { id: 33, label: 'Azure' },
+      { id: 34, label: 'GitLab' },
+      { id: 35, label: 'Bitbucket' },
+      { id: 36, label: 'GitHub' },
+      { id: 37, label: 'Jenkins' },
+    ],
+  },
+];
+
+// Desktop orbital data
+interface OrbitalIntegration extends Integration {
   angle: number;
   orbitRadius: number;
   phase: number;
 }
 
-// Three orbital rings expanding from center
-const integrations: Integration[] = [
+const orbitalIntegrations: OrbitalIntegration[] = [
   // Inner orbit - 3 cards
-  { id: 1, label: 'Slack', angle: 0, orbitRadius: ORBIT_RADIUS * 0.5, phase: 0 },
-  { id: 2, label: 'GitHub', angle: 120, orbitRadius: ORBIT_RADIUS * 0.5, phase: 0 },
-  { id: 3, label: 'Figma', angle: 240, orbitRadius: ORBIT_RADIUS * 0.5, phase: 0 },
+  { id: 1, label: 'Slack', angle: 0, orbitRadius: ORBIT_RADIUS * 0.4, phase: 0 },
+  { id: 2, label: 'GitHub', angle: 120, orbitRadius: ORBIT_RADIUS * 0.4, phase: 0 },
+  { id: 3, label: 'Figma', angle: 240, orbitRadius: ORBIT_RADIUS * 0.4, phase: 0 },
   
   // Middle orbit - 4 cards
-  { id: 4, label: 'Notion', angle: 0, orbitRadius: ORBIT_RADIUS, phase: 0 },
-  { id: 5, label: 'Jira', angle: 90, orbitRadius: ORBIT_RADIUS, phase: 0 },
-  { id: 6, label: 'Stripe', angle: 180, orbitRadius: ORBIT_RADIUS, phase: 0 },
-  { id: 7, label: 'Zoom', angle: 270, orbitRadius: ORBIT_RADIUS, phase: 0 },
+  { id: 4, label: 'Notion', angle: 0, orbitRadius: ORBIT_RADIUS * 0.85, phase: 0 },
+  { id: 5, label: 'Jira', angle: 90, orbitRadius: ORBIT_RADIUS * 0.85, phase: 0 },
+  { id: 6, label: 'Stripe', angle: 180, orbitRadius: ORBIT_RADIUS * 0.85, phase: 0 },
+  { id: 7, label: 'Zoom', angle: 270, orbitRadius: ORBIT_RADIUS * 0.85, phase: 0 },
   
   // Outer orbit - 3 cards
-  { id: 8, label: 'Salesforce', angle: 60, orbitRadius: ORBIT_RADIUS * 1.5, phase: 0 },
-  { id: 9, label: 'Asana', angle: 180, orbitRadius: ORBIT_RADIUS * 1.5, phase: 0 },
-  { id: 10, label: 'Teams', angle: 300, orbitRadius: ORBIT_RADIUS * 1.5, phase: 0 },
+  { id: 8, label: 'Salesforce', angle: 60, orbitRadius: ORBIT_RADIUS * 1.4, phase: 0 },
+  { id: 9, label: 'Asana', angle: 180, orbitRadius: ORBIT_RADIUS * 1.4, phase: 0 },
+  { id: 10, label: 'Teams', angle: 300, orbitRadius: ORBIT_RADIUS * 1.4, phase: 0 },
 ];
 
 const Integrations = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return (
+    <section
+      role="region"
+      aria-label="Integrations section"
+      className="relative overflow-hidden"
+      style={{
+        '--bg': '#092C5D',
+        '--accent': '#00B3A4',
+        '--text': '#FFFFFF',
+        backgroundColor: 'var(--bg)',
+        minHeight: '100vh',
+      } as React.CSSProperties}
+    >
+      {isMobile ? <MobileLayout /> : <DesktopLayout />}
+    </section>
+  );
+};
+
+// Mobile Static Layout
+const MobileLayout = () => {
+  return (
+    <div className="px-4 py-12">
+      {/* Heading */}
+      <h2 className="text-2xl font-bold text-center mb-8 px-4" style={{ color: 'var(--text)' }}>
+        Get unified visibility into your entire cloud infrastructure
+      </h2>
+
+      {/* Center Logo */}
+      <div className="flex flex-col items-center mb-12">
+        <div
+          className="w-16 h-16 rounded-full flex items-center justify-center mb-3"
+          style={{
+            backgroundColor: 'var(--accent)',
+            boxShadow: '0 0 30px rgba(0, 179, 164, 0.4)',
+          }}
+        >
+          <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center">
+            <span className="text-white text-xs font-bold">J1</span>
+          </div>
+        </div>
+        <h3 className="text-xl font-semibold" style={{ color: 'var(--text)' }}>
+          JupiterOne
+        </h3>
+      </div>
+
+      {/* Category Groups */}
+      <div className="space-y-6 max-w-md mx-auto">
+        {categoryGroups.map((group) => (
+          <div key={group.category} className="space-y-3">
+            {/* Category Label */}
+            <div
+              className="px-4 py-2 rounded-full text-center text-sm font-medium"
+              style={{
+                backgroundColor: 'rgba(0, 179, 164, 0.15)',
+                border: '1px solid rgba(0, 179, 164, 0.3)',
+                color: 'var(--text)',
+              }}
+            >
+              {group.category}
+            </div>
+
+            {/* Integration Icons Row */}
+            <div className="flex items-center justify-center gap-3 flex-wrap">
+              {group.integrations.map((integration) => (
+                <div
+                  key={integration.id}
+                  className="w-10 h-10 rounded-lg flex items-center justify-center text-xs font-medium"
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    color: 'var(--text)',
+                  }}
+                  title={integration.label}
+                >
+                  {integration.label.slice(0, 2).toUpperCase()}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Desktop Orbital Layout
+const DesktopLayout = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [cycleProgress, setCycleProgress] = useState(0);
 
-  // Pointer tracking for parallax
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
@@ -74,6 +259,21 @@ const Integrations = () => {
     stiffness: 150,
     damping: 30,
   });
+
+  useEffect(() => {
+    let animationFrame: number;
+    const startTime = Date.now();
+
+    const animate = () => {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const progress = (elapsed % CYCLE_DURATION) / CYCLE_DURATION;
+      setCycleProgress(progress);
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -98,15 +298,17 @@ const Integrations = () => {
   };
 
   const centerX = dimensions.width / 2;
-  const centerY = dimensions.height / 2;
+  const centerY = dimensions.height / 2 + 40;
 
-  // Calculate positions for cards on perfect circular orbits
-  const getCardPosition = (integration: Integration, time: number) => {
-    // Rotate cards around their orbit
+  const getFadeOpacity = () => {
+    if (cycleProgress < FADE_OUT_START) return 1;
+    return 1 - ((cycleProgress - FADE_OUT_START) / (1 - FADE_OUT_START));
+  };
+
+  const getCardPosition = (integration: OrbitalIntegration, time: number) => {
     const orbitAngle = integration.angle + (time * 360) / ORBIT_DURATION;
     const radians = (orbitAngle * Math.PI) / 180;
-    const scale = typeof window !== 'undefined' && window.innerWidth < 768 ? 0.6 : 1;
-    const radius = integration.orbitRadius * scale;
+    const radius = integration.orbitRadius;
     
     return {
       x: centerX + Math.cos(radians) * radius,
@@ -115,24 +317,19 @@ const Integrations = () => {
   };
 
   return (
-    <section
-      role="region"
-      aria-label="Integrations section"
-      className="relative overflow-hidden"
-      style={{
-        // Enforce strict color palette via CSS variables
-        '--bg': '#092C5D',
-        '--accent': '#00B3A4',
-        '--text': '#FFFFFF',
-        backgroundColor: 'var(--bg)',
-        height: '100vh',
-        maxHeight: '100vh',
-      } as React.CSSProperties}
+    <div
       ref={containerRef}
       onPointerMove={handlePointerMove}
+      style={{ height: '100vh' }}
     >
-			<h2 className="section-title text-light-tile">Get unified visibility into your entire cloud infrastructure</h2>
-      {/* Background gradient overlay for depth */}
+      {/* Heading */}
+      <div className="absolute top-12 left-0 right-0 flex justify-center z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center px-4 max-w-4xl" style={{ color: 'var(--text)' }}>
+          Get unified visibility into your entire cloud infrastructure
+        </h2>
+      </div>
+
+      {/* Background gradient */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -140,7 +337,7 @@ const Integrations = () => {
         }}
       />
 
-      {/* Main content container with parallax */}
+      {/* Orbital content */}
       <motion.div
         className="relative w-full h-full flex items-center justify-center"
         style={{
@@ -148,7 +345,7 @@ const Integrations = () => {
           y: parallaxY,
         }}
       >
-        {/* SVG Orbit Circles and Connector Lines */}
+        {/* SVG Orbits and Connectors */}
         <svg
           className="absolute"
           width={dimensions.width}
@@ -165,10 +362,10 @@ const Integrations = () => {
             </filter>
           </defs>
 
-          {/* Draw perfect circular orbit paths */}
-          {[0.5, 1, 1.5].map((radiusMultiplier, idx) => {
-            const scale = typeof window !== 'undefined' && window.innerWidth < 768 ? 0.6 : 1;
-            const radius = ORBIT_RADIUS * radiusMultiplier * scale;
+          {/* Orbit circles */}
+          {[0.4, 0.85, 1.4].map((radiusMultiplier, idx) => {
+            const radius = ORBIT_RADIUS * radiusMultiplier;
+            const fadeOpacity = getFadeOpacity();
             
             return (
               <motion.circle
@@ -179,25 +376,34 @@ const Integrations = () => {
                 stroke="var(--accent)"
                 strokeWidth="1"
                 fill="none"
-                opacity="0.2"
                 initial={{ r: 0, opacity: 0 }}
-                animate={{ r: radius, opacity: 0.2 }}
+                animate={{ 
+                  r: radius, 
+                  opacity: 0.2 * fadeOpacity 
+                }}
                 transition={{
-                  duration: 1.2,
-                  delay: idx * 0.2,
-                  ease: [0.34, 1.56, 0.64, 1],
+                  r: {
+                    duration: 1.2,
+                    delay: idx * 0.2,
+                    ease: [0.34, 1.56, 0.64, 1],
+                  },
+                  opacity: {
+                    duration: 0.5,
+                  }
                 }}
               />
             );
           })}
 
-          {/* Draw connector lines between cards on the same orbit */}
+          {/* Connector lines */}
           {[
-            integrations.filter(i => i.orbitRadius === ORBIT_RADIUS * 0.5),
-            integrations.filter(i => i.orbitRadius === ORBIT_RADIUS),
-            integrations.filter(i => i.orbitRadius === ORBIT_RADIUS * 1.5),
-          ].map((orbitCards, orbitIdx) => 
-            orbitCards.map((integration, idx) => {
+            orbitalIntegrations.filter(i => i.orbitRadius === ORBIT_RADIUS * 0.4),
+            orbitalIntegrations.filter(i => i.orbitRadius === ORBIT_RADIUS * 0.85),
+            orbitalIntegrations.filter(i => i.orbitRadius === ORBIT_RADIUS * 1.4),
+          ].map((orbitCards, orbitIdx) => {
+            const fadeOpacity = getFadeOpacity();
+            
+            return orbitCards.map((integration, idx) => {
               const nextIntegration = orbitCards[(idx + 1) % orbitCards.length];
               const pos1 = getCardPosition(integration, 0);
               const pos2 = getCardPosition(nextIntegration, 0);
@@ -217,14 +423,11 @@ const Integrations = () => {
                   initial={{
                     strokeDasharray: pathLength,
                     strokeDashoffset: pathLength,
-                    opacity: 0.4,
+                    opacity: 0,
                   }}
                   animate={{
                     strokeDashoffset: 0,
-                    opacity: 0.4,
-                  }}
-                  whileHover={{
-                    opacity: 0.8,
+                    opacity: 0.4 * fadeOpacity,
                   }}
                   transition={{
                     strokeDashoffset: {
@@ -233,35 +436,26 @@ const Integrations = () => {
                       ease: 'easeOut',
                     },
                     opacity: {
-                      duration: 0.3,
+                      duration: 0.5,
                     },
                   }}
                 />
               );
-            })
-          )}
+            });
+          })}
         </svg>
 
         {/* Integration Cards */}
         <motion.div
           className="relative"
           style={{ width: dimensions.width, height: dimensions.height }}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: STAGGER_DELAY,
-              },
-            },
-          }}
         >
-          {integrations.map((integration, idx) => (
-            <IntegrationCard
+          {orbitalIntegrations.map((integration) => (
+            <OrbitalCard
               key={integration.id}
               integration={integration}
-              index={idx}
               getPosition={(time) => getCardPosition(integration, time)}
+              fadeOpacity={getFadeOpacity()}
             />
           ))}
         </motion.div>
@@ -270,13 +464,13 @@ const Integrations = () => {
         <motion.div
           className="absolute"
           style={{
-            left: centerX - 6,
-            top: centerY - 6,
-            width: 12,
-            height: 12,
+            left: centerX - 8,
+            top: centerY - 8,
+            width: 16,
+            height: 16,
             borderRadius: '50%',
             backgroundColor: 'var(--accent)',
-            boxShadow: '0 0 20px var(--accent)',
+            boxShadow: '0 0 30px var(--accent)',
           }}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.8 }}
@@ -286,17 +480,17 @@ const Integrations = () => {
           }}
         />
       </motion.div>
-    </section>
+    </div>
   );
 };
 
-interface IntegrationCardProps {
-  integration: Integration;
-  index: number;
+interface OrbitalCardProps {
+  integration: OrbitalIntegration;
   getPosition: (time: number) => { x: number; y: number };
+  fadeOpacity: number;
 }
 
-const IntegrationCard = ({ integration, index, getPosition }: IntegrationCardProps) => {
+const OrbitalCard = ({ integration, getPosition, fadeOpacity }: OrbitalCardProps) => {
   const [time, setTime] = useState(0);
 
   useEffect(() => {
@@ -317,46 +511,40 @@ const IntegrationCard = ({ integration, index, getPosition }: IntegrationCardPro
 
   return (
     <motion.div
-      className="absolute focus:outline-white focus:outline-offset-2 focus:outline-[3px] rounded-2xl cursor-pointer"
+      className="absolute rounded-2xl cursor-pointer"
       style={{
         left: position.x,
         top: position.y,
         x: '-50%',
         y: '-50%',
+        opacity: fadeOpacity,
       }}
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 30,
-          scale: 0.8,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-        },
+      initial={{
+        opacity: 0,
+        scale: 0.8,
+      }}
+      animate={{
+        opacity: fadeOpacity,
+        scale: 1,
       }}
       whileHover={{
         scale: 1.1,
       }}
       transition={{
-        duration: ENTRANCE_DURATION,
-        ease: [0.34, 1.56, 0.64, 1], // Spring-like easing with overshoot
+        duration: 0.6,
+        ease: [0.34, 1.56, 0.64, 1],
         scale: { duration: 0.2 },
+        opacity: { duration: 0.5 },
       }}
-      tabIndex={0}
-      role="button"
-      aria-label={`${integration.label} integration`}
     >
       <div
-        className="relative px-4 py-3 rounded-2xl backdrop-blur-sm"
+        className="relative px-5 py-3 rounded-2xl backdrop-blur-sm"
         style={{
           backgroundColor: 'rgba(255, 255, 255, 0.08)',
           border: '1px solid rgba(255, 255, 255, 0.15)',
           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
         }}
       >
-        {/* Card Label */}
         <span
           className="text-sm font-medium whitespace-nowrap"
           style={{ color: 'var(--text)' }}
@@ -364,7 +552,6 @@ const IntegrationCard = ({ integration, index, getPosition }: IntegrationCardPro
           {integration.label}
         </span>
 
-        {/* Pulsing Accent Node */}
         <motion.div
           className="absolute -top-1 -right-1 rounded-full"
           style={{
@@ -378,10 +565,9 @@ const IntegrationCard = ({ integration, index, getPosition }: IntegrationCardPro
             opacity: [1, 0.6, 1],
           }}
           transition={{
-            duration: PULSE_DURATION,
+            duration: 2,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: integration.phase,
           }}
         />
       </div>

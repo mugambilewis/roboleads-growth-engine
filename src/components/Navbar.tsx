@@ -60,7 +60,7 @@ const Navbar = () => {
               SERVICES
             </a>
             <a 
-              href="#about-us" 
+              href="#about" 
               className="text-sm font-medium transition-colors hover:opacity-80"
               style={{ color: '#092C5D' }}
               onClick={(e) => {

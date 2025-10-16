@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-card/30">
+    <section className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Side - Illustration Placeholder */}
@@ -72,28 +72,28 @@ const WhyChooseUs = () => {
           <div className="order-1 lg:order-2">
             <div className="space-y-6">
               <div>
-                <p className="text-sm text-muted-foreground mb-2">Why Choose Us</p>
-                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
+                <p className="text-sm text-[#00B3A4] mb-2">Why Choose Us</p>
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-[#092C5D]">
                   WHY CHOOSE A{" "}
-                  <span className="gradient-text">SMART WEBSITE?</span>
+                  <span className="text-[#00B3A4]">SMART WEBSITE?</span>
                 </h2>
-                <p className="text-xl text-muted-foreground mb-6">
+                <p className="text-xl text-[#092C5D] mb-6">
                   Traditional websites are outdated. Smart Websites are the future.
                 </p>
               </div>
 
-              <p className="text-lg text-foreground/80 leading-relaxed mb-8">
+              <p className="text-lg text-[#092C5D] leading-relaxed mb-8">
                 A regular website just sits there. A Smart Website works for you, helping you attract leads, automate tasks, and grow your business without extra effort.
               </p>
 
               <div className="space-y-4">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-[#00B3A4] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <span className="font-semibold text-primary">{feature.title}</span>
+                      <span className="font-semibold text-[#092C5D]">{feature.title}</span>
                       <span className="text-foreground/80"> - {feature.description}</span>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="pt-4">
-                <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-3 rounded-lg">
+                <Button className="bg-[#00B3A4] hover:bg-[#00B3A4]/90 text-[#092C5D] font-bold px-8 py-3 rounded-lg">
                   CHECK PLAN OFFERS
                 </Button>
               </div>
