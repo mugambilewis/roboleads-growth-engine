@@ -8,6 +8,7 @@ import AboutUs from "@/components/AboutUs";
 import Testimonials from "@/components/Testimonials";
 import FAQSection from "@/components/FAQSection";
 import ReadyToBegin from "@/components/ReadyToBegin";
+import Integrations from "@/components/Integrations";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <TrustBar />
+      <Integrations />
       <ServicesTabs />
       <Testimonials />
       <Services />
