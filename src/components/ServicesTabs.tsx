@@ -51,7 +51,7 @@ const ServicesTabs = () => {
   };
 
   return (
-    <section id="solutions" className="py-24 md:py-32">
+    <section id="solutions" className="py-24 md:py-32 bg-[#092C5D]">
       <div className="container mx-auto px-8">
         <div className="max-w-6xl mx-auto">
           {/* Tab Navigation - Mobile: Single Column, Desktop: Horizontal */}
@@ -65,7 +65,7 @@ const ServicesTabs = () => {
                   className={`px-4 py-3 rounded-lg font-medium transition-all duration-200 text-left ${
                     activeTab === tab.id
                       ? "bg-primary text-white"
-                      : "bg-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      : "bg-transparent text-gray-600 hover:text-gray-900 hover:bg-[#00B3A4]"
                   }`}
                 >
                   {tab.label}
@@ -82,7 +82,7 @@ const ServicesTabs = () => {
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                     activeTab === tab.id
                       ? "bg-primary text-white"
-                      : "bg-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      : "bg-transparent text-gray-600 hover:text-white hover:bg-[#00B3A4]"
                   }`}
                 >
                   {tab.label}
@@ -97,7 +97,7 @@ const ServicesTabs = () => {
               {/* Left Column - Text Content */}
               <div className="space-y-4 md:space-y-6 order-2 lg:order-1">
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#092C5D]/90 mb-2">
                     {tabContent[activeTab as keyof typeof tabContent].title}
                   </h2>
                   <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-700 mb-4">
@@ -109,13 +109,13 @@ const ServicesTabs = () => {
                   {tabContent[activeTab as keyof typeof tabContent].description}
                 </p>
                 
-                <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 md:px-8 md:py-3 rounded-lg w-full md:w-auto">
+                <Button className="bg-[#00B3A4] hover:bg-[#00B3A4]/90 text-[#092C5D] font-bold px-6 py-3 md:px-8 md:py-3 rounded-lg w-full md:w-auto">
                   {tabContent[activeTab as keyof typeof tabContent].cta}
                 </Button>
               </div>
 
               {/* Right Column - Illustration */}
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg overflow-hidden min-h-[300px] md:min-h-[400px] flex flex-col order-1 lg:order-2">
+              <div className="bg-[#00B3A4] rounded-lg overflow-hidden min-h-[300px] md:min-h-[400px] flex flex-col order-1 lg:order-2">
                 <div className="flex-1 relative">
                   <img
                     src={tabContent[activeTab as keyof typeof tabContent].image}

@@ -1,34 +1,64 @@
+import React from 'react';
+
 const TrustBar = () => {
   const integrations = [
-    "Zapier",
-    "Make",
-    "WhatsApp API",
-    "Google Workspace",
-    "Notion",
-    "Slack",
-    "Twilio",
-    "Stripe"
+     {
+      name: "Zapier",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zapier.svg"
+    },
+    {
+      name: "Make",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/make.svg"
+    },
+    {
+      name: "WhatsApp API",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg"
+    },
+    {
+      name: "Google Workspace",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg"
+    },
+    {
+      name: "Notion",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/notion.svg"
+    },
+    {
+      name: "Slack",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg"
+    },
+    {
+      name: "Twilio",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twilio.svg"
+    },
+    {
+      name: "Stripe",
+      svg: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/stripe.svg"
+    }
   ];
 
   // Duplicate items to ensure seamless marquee scrolling
   const scrollingItems = [...integrations, ...integrations];
 
   return (
-    <section className="py-16 border-y border-border/50">
+    <section className="py-16  bg-[#e8f1fd]">
       <div className="container mx-auto px-8">
-        <p className="text-center text-muted-foreground text-sm uppercase tracking-wider mb-8">
-          Powered by industry-leading tools
-        </p>
+        
         <div className="group relative overflow-hidden">
           <div
             className="flex w-max items-center gap-12 md:gap-16 animate-marquee group-hover:[animation-play-state:paused] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
           >
             {scrollingItems.map((integration, idx) => (
               <div
-                key={`${integration}-${idx}`}
-                className="text-foreground/60 hover:text-foreground transition-colors text-lg font-medium"
+                key={`${integration.name}-${idx}`}
+                className="flex items-center gap-3 text-[#092C5D] hover:text-[#092C5D]/90 transition-colors"
               >
-                {integration}
+                <img 
+                  src={integration.svg} 
+                  alt={integration.name}
+                  className="h-8 w-auto"
+                  style={{ filter: 'invert(9%) sepia(47%) saturate(3371%) hue-rotate(198deg) brightness(95%) contrast(98%)' }}
+                />
+                <span className="text-lg font-medium whitespace-nowrap">{integration.name}</span>
               </div>
             ))}
           </div>
