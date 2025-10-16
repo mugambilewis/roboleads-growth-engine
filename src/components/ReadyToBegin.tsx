@@ -9,15 +9,12 @@ const ReadyToBegin = () => {
           <div className="space-y-4">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#092C5D]">
               READY TO
+              <span className="text-[#00B3A4]"> BEGIN?</span>
             </h2>
             <div className="relative inline-block">
-              <div className="bg-gradient-to-r from-[#092C5D] via-[#062249] to-[#03142c] transform -rotate-2 px-8 py-4 rounded-lg shadow-lg">
-                <span className="text-white font-bold text-4xl md:text-6xl lg:text-7xl">
-                  BEGIN?
-                </span>
-              </div>
-              {/* Additional ribbon effect */}
-              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-r from-white to-[#96baea] transform -rotate-2 rounded-lg opacity-30"></div>
+              
+             
+             
             </div>
           </div>
 

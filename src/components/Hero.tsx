@@ -49,7 +49,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-8 relative z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ color: '#092C5D' }}>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight" style={{ color: '#092C5D' }}>
             <div>You're one step away from</div>
             <div className="min-h-[1.2em]" style={{ color: '#00B3A4' }}>
               {currentText}
