@@ -28,15 +28,15 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Top right decorative circles */}
         <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-[#00B3A4] opacity-20 animate-pulse"></div>
-        <div className="absolute top-32 right-32 w-20 h-20 rounded-full bg-white opacity-10"></div>
+        <div className="absolute top-32 right-32 w-20 h-20 rounded-full bg-[#e8f1fd] opacity-10"></div>
         
         {/* Bottom left decorative circles */}
-        <div className="absolute bottom-32 left-20 w-40 h-40 rounded-full bg-white opacity-10"></div>
+        <div className="absolute bottom-32 left-20 w-40 h-40 rounded-full bg-[#e8f1fd] opacity-10"></div>
         <div className="absolute bottom-20 left-32 w-24 h-24 rounded-full bg-[#00B3A4] opacity-20 animate-pulse"></div>
         
         {/* Floating geometric shapes */}
         <div className="absolute top-1/4 left-10 w-16 h-16 border-2 border-[#00B3A4] opacity-30 rounded-lg transform rotate-12"></div>
-        <div className="absolute bottom-1/3 right-16 w-12 h-12 border-2 border-white opacity-20 rounded-full"></div>
+        <div className="absolute bottom-1/3 right-16 w-12 h-12 border-2 border-[#e8f1fd] opacity-20 rounded-full"></div>
       </div>
 
       {/* Content */}
@@ -89,7 +89,7 @@ const Hero = () => {
       </div>
 
       {/* Subtle bottom fade for smooth transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#e8f1fd] to-transparent"></div>
     </section>
   );
 };
