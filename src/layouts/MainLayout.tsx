@@ -14,6 +14,7 @@ const MainLayout = () => {
       </main>
 
       {/* Footer always visible */}
+      
       <Footer />
     </div>
   );

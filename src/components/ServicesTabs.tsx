@@ -64,7 +64,7 @@ const ServicesTabs = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-3 rounded-lg font-medium transition-all duration-200 text-left ${
                     activeTab === tab.id
-                      ? "bg-primary text-white"
+                      ? "bg-[#00B3A4] text-white"
                       : "bg-transparent text-[#092C5D] hover:text-[#092C5D]/90 hover:bg-[#00B3A4]"
                   }`}
                 >
@@ -79,7 +79,7 @@ const ServicesTabs = () => {
     <button
       key={tab.id}
       onClick={() => setActiveTab(tab.id)}
-      className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+      className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
         activeTab === tab.id
           ? "bg-[#00B3A4] text-white"
           : "bg-transparent text-[#092C5D] hover:text-white hover:bg-[#00B3A4]"
