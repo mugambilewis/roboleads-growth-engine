@@ -5,17 +5,17 @@ const Services = () => {
     {
       title: "Attract",
       description: "Drive organic traffic to your website with strategic keyword optimization, engaging content, and technical SEO enhancements.",
-      image: "/images/SEO Dashboard.png",
+      image: "/images/high-conversion sales funnel.jpg",
     },
     {
       title: "UpSell",
       description: "Automate your sales and marketing processes to maximize conversions. AI-driven chatbots engage customers, while personalized automation nurtures leads through targeted email sequences.",
-      image: "/images/Sales Automation.png",
+      image: "/images/AI chatbot conversation on.jpg",
     },
     {
       title: "Repeat",
       description: "Stay in control of your website anytime, anywhere with a mobile-friendly management app. Update content, track analytics, and respond to leads instantly, ensuring continuous engagement.",
-      image: "/images/Website Analytics Dashboard.png",
+      image: "/images/business management mobile app dashboard.jpg",
     },
     {
       title: "Sell",
@@ -25,7 +25,7 @@ const Services = () => {
     {
       title: "Ascend",
       description: "A well-designed website enhances trust and keeps users engaged. With modern UI/UX, fast performance, and conversion-focused design, your site becomes an effective sales tool.",
-      image: "/images/UI UX Engagement Analytics.jpg",
+      image: "/images/Website desktop + mobile.jpg",
     }
   ];
 

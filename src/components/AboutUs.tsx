@@ -45,43 +45,15 @@ const AboutUs = () => {
               
               {/* Main illustration - Team at desk */}
               <div className="relative z-10">
+
                 {/* Desk */}
-                <div className="w-full h-32 bg-amber-600 rounded-lg mb-4 relative">
-                  {/* Laptop on desk */}
-                  <div className="absolute top-4 right-8 w-16 h-12 bg-gray-300 rounded flex items-center justify-center">
-                    <div className="w-12 h-8 bg-white rounded"></div>
-                  </div>
-                  
-                  {/* Papers */}
-                  <div className="absolute top-6 right-4 w-8 h-10 bg-white rounded"></div>
-                  
-                  {/* Team members */}
-                  <div className="absolute -top-8 left-4 flex space-x-4">
-                    {/* Person 1 */}
-                    <div className="w-12 h-16 bg-blue-500 rounded-lg flex items-end justify-center">
-                      <div className="w-8 h-8 bg-pink-200 rounded-full mb-1"></div>
-                    </div>
-                    
-                    {/* Person 2 */}
-                    <div className="w-12 h-16 bg-indigo-500 rounded-lg flex items-end justify-center">
-                      <div className="w-8 h-8 bg-pink-200 rounded-full mb-1"></div>
-                    </div>
-                    
-                    {/* Person 3 */}
-                    <div className="w-12 h-16 bg-yellow-500 rounded-lg flex items-end justify-center">
-                      <div className="w-8 h-8 bg-pink-200 rounded-full mb-1"></div>
-                    </div>
-                  </div>
-                </div>
                 
-                {/* Background shelves */}
-                <div className="absolute top-0 right-0 w-20 h-16 bg-blue-200 rounded-lg"></div>
-                <div className="absolute top-2 right-2 w-4 h-4 bg-blue-300 rounded"></div>
-                <div className="absolute top-6 right-2 w-4 h-4 bg-blue-300 rounded"></div>
-                
-                {/* Plants */}
-                <div className="absolute bottom-0 left-0 w-6 h-8 bg-green-400 rounded-full"></div>
-                <div className="absolute bottom-0 right-0 w-6 h-8 bg-green-400 rounded-full"></div>
+                <img
+                  src="/images/Team meeting around.jpg"
+                  alt="Team working at desk illustration"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+             
               </div>
             </div>
           </div>

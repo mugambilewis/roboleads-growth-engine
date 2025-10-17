@@ -16,14 +16,14 @@ const ServicesTabs = () => {
     "SEO": {
       title: "SEO",
       subtitle: "Rank Higher, Get Found, Grow Faster",
-      image : "/images/SEO.jpg",
+      image : "/images/SEO digital marketing concept.jpg",
       description: "Boost your website's visibility with cutting-edge SEO strategies that drive organic traffic and improve search rankings. We optimize your content, structure, and keywords to ensure your site stands out on Google and other search engines. Stay ahead of competitors with data-driven insights and continuous performance monitoring.",
       cta: "LEARN MORE"
     },
     "Lead Capturing": {
       title: "Lead Capturing",
       subtitle: "Convert Visitors Into Customers",
-      image : "/images/lead capturing.jpg",
+      image : "/images/lead generation concept, website conversion funnel.jpg",
       description: "Transform your website traffic into qualified leads with our advanced lead capture systems. We implement strategic forms, landing pages, and conversion funnels that turn visitors into prospects. Our data-driven approach ensures maximum ROI from every visitor.",
       cta: "LEARN MORE"
     },
@@ -37,14 +37,14 @@ const ServicesTabs = () => {
     "Beautiful Web Design": {
       title: "Beautiful Web Design",
       subtitle: "Stunning Sites That Convert",
-      image : "/images/web development.jpg",
+      image : "/images/modern website design.jpg",
       description: "Create visually stunning websites that not only look amazing but also drive conversions. Our design team combines aesthetics with functionality to deliver user experiences that engage visitors and turn them into loyal customers.",
       cta: "LEARN MORE"
     },
     "Mobile App Manageable": {
       title: "Mobile App Manageable",
       subtitle: "Control Everything On The Go",
-      image : "/images/mobile app management.jpg",
+      image : "/images/business management mobile app dashboard.jpg",
       description: "Manage your entire business ecosystem from anywhere with our comprehensive mobile app. Track leads, monitor performance, communicate with clients, and make data-driven decisions all from the palm of your hand.",
       cta: "LEARN MORE"
     }
