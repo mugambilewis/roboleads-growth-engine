@@ -18,11 +18,11 @@ const Index = () => {
       <TrustBar />
       {/* <Integrations /> */}
       <ServicesTabs />
-      <Testimonials />
+      
       <Services />
       <WhyChooseUs />
       <AboutUs />
-      
+      <Testimonials />
       <FAQSection />
       <ReadyToBegin />
      

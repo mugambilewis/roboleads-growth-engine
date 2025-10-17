@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold text-[#092C5D]/90 mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-[#092C5D] hover:text-[#092C5D]/90  transition-colors text-sm">
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Solutions</h4>
+            <h4 className="font-semibold text-[#092C5D]/90 mb-4 ">Solutions</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-[#092C5D] hover:text-[#092C5D]/90  transition-colors text-sm">
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Support</h4>
+            <h4 className="font-semibold text-[#092C5D]/90 mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-[#092C5D] hover:text-[#092C5D]/90  transition-colors text-sm">

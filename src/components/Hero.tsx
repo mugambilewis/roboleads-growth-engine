@@ -44,7 +44,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ backgroundColor: '#e8f1fd' }}>
       {/* Background Image with Overlay */}
       
-      <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(to bottom, rgba(232, 241, 253, 0.5), rgba(232, 241, 253, 0.8), #e8f1fd)' }} />
+      
       
       {/* Content */}
       <div className="container mx-auto px-8 relative z-10 text-center">

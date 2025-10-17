@@ -22,12 +22,12 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-24 md:py-32 bg-[#092C5D]">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Side - Illustration Placeholder */}
           <div className="order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl p-8 relative overflow-hidden">
+            <div className="bg-white rounded-2xl p-8 relative overflow-hidden">
               {/* Stars background */}
               <div className="absolute inset-0">
                 <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full opacity-60"></div>
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
                 {/* Woman on laptop */}
                 <div className="flex items-end justify-start mb-8">
                   <div className="w-32 h-32 bg-yellow-400 rounded-lg flex items-center justify-center">
-                    <div className="w-24 h-24 bg-blue-900 rounded-lg flex items-center justify-center">
+                    <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
                       <div className="w-16 h-10 bg-gray-200 rounded"></div>
                     </div>
                   </div>
@@ -73,16 +73,16 @@ const WhyChooseUs = () => {
             <div className="space-y-6">
               <div>
                 <p className="text-sm text-[#00B3A4] mb-2">Why Choose Us</p>
-                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-[#092C5D]">
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">
                   WHY CHOOSE A{" "}
                   <span className="text-[#00B3A4]">SMART WEBSITE?</span>
                 </h2>
-                <p className="text-xl text-[#092C5D] mb-6">
+                <p className="text-xl text-white mb-6">
                   Traditional websites are outdated. Smart Websites are the future.
                 </p>
               </div>
 
-              <p className="text-lg text-[#092C5D] leading-relaxed mb-8">
+              <p className="text-lg text-white leading-relaxed mb-8">
                 A regular website just sits there. A Smart Website works for you, helping you attract leads, automate tasks, and grow your business without extra effort.
               </p>
 
@@ -93,7 +93,7 @@ const WhyChooseUs = () => {
                       <Check className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <span className="font-semibold text-[#092C5D]">{feature.title}</span>
+                      <span className="font-semibold text-white">{feature.title}</span>
                       <span className="text-foreground/80"> - {feature.description}</span>
                     </div>
                   </div>

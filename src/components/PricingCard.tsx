@@ -20,7 +20,7 @@ const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div 
-      className="premium-card rounded-[var(--radius)] p-8 flex flex-col h-full animate-fade-in-up"
+      className="premium-card rounded-[var(--radius)] p-8 flex flex-col h-full animate-fade-in-up border border-border/50 hover:border-[#00B3A4]/30 transition-all duration-300 hover:shadow-lg"
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Header */}
@@ -64,5 +64,4 @@ const PricingCard = ({
     </div>
   );
 };
-
 export default PricingCard;
