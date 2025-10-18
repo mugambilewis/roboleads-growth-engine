@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQSection from "@/components/FAQSection";
 import ReadyToBegin from "@/components/ReadyToBegin";
 import Integrations from "@/components/Integrations";
+import ChatWidget from "@/components/ChatWidget";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       <Testimonials />
       <FAQSection />
       <ReadyToBegin />
+      <ChatWidget />
      
     </div>
   );

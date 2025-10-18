@@ -194,12 +194,12 @@ const Navbar = () => {
               SERVICES
             </a>
             <a 
-              href="#about-us" 
+              href="#about" 
               className="text-sm font-medium py-2 px-4 rounded-md transition-colors hover:bg-gray-50"
               style={{ color: '#092C5D' }}
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('#about-us');
+                handleNavClick('#about');
               }}
             >
               ABOUT US
