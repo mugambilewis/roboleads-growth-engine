@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Calendar, ArrowRight, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +67,7 @@ const Navbar = () => {
               style={{ color: '#092C5D' }}
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('#about-us');
+                handleNavClick('#about');
               }}
             >
               ABOUT US
@@ -126,17 +127,16 @@ const Navbar = () => {
               )}
             </div>
 
-            <a 
-              href="#contact" 
+            
+
+           <Link
+              to="/contact"
               className="text-sm font-medium transition-colors hover:opacity-80"
               style={{ color: '#092C5D' }}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('#contact');
-              }}
-            >
+             >
               CONTACT
-            </a>
+            </Link>
+
             <Link
               to="/pricing"
               className="text-sm font-medium transition-colors hover:opacity-80"
@@ -146,10 +146,16 @@ const Navbar = () => {
             </Link>
             <Button
               className="text-white font-medium px-6 py-2 rounded-md transition-all hover:opacity-90 hover:shadow-lg"
-              style={{ backgroundColor: '#00B3A4' }}
-              onClick={handleBooking}
+              
             >
-              BOOK APPOINTMENT
+                  <Link
+                  to="/book-appointment"
+                  
+                  
+                >
+                 BOOK APPOINTMENT
+                </Link>
+              
             </Button>
           </div>
 
@@ -273,10 +279,14 @@ const Navbar = () => {
             <Button
               className="text-white font-medium w-full py-2 rounded-md transition-all hover:opacity-90 hover:shadow-lg"
               style={{ backgroundColor: '#00B3A4' }}
-              onClick={handleBooking}
+              onClick={() => navigate("/book-appointment")}
             >
-              BOOK APPOINTMENT
+              <Calendar className="w-6 h-6 mr-3" />
+                Book Free Consultation
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
             </Button>
+                
+
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ import ChatWidget from "@/components/ChatWidget";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div id="home"className="min-h-screen">
       <Navbar />
       <Hero />
       <TrustBar />

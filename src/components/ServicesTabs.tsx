@@ -51,8 +51,8 @@ const ServicesTabs = () => {
   };
 
   return (
-    <section id="solutions" className="py-24 md:py-32 bg-[#092C5D]">
-      <div className="container mx-auto px-8">
+    <section id="services" className="py-16 md:py-24 lg:py-32 bg-[#092C5D]">
+      <div className="container mx-auto px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Tab Navigation - Mobile: Single Column, Desktop: Horizontal */}
           <div className="mb-8 bg-white rounded-lg p-2">
