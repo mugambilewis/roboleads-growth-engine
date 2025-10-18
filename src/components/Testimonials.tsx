@@ -34,7 +34,7 @@ const Testimonials = () => {
         {/* Marquee carousel */}
         <div className="group relative overflow-hidden max-w-6xl mx-auto">
           <div
-            className="flex w-max items-stretch gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
+            className="flex w-max items-stretch gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]"
           >
             {[...testimonials, ...testimonials].map((testimonial, idx) => (
               <div key={`${testimonial.author}-${idx}`} className="w-[340px] md:w-[380px] flex-shrink-0">
@@ -45,12 +45,12 @@ const Testimonials = () => {
                         <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-[#00B3A4] text-[#00B3A4]" />
                       ))}
                     </div>
-                    <p className="text-foreground/90 mb-6 leading-relaxed text-base md:text-lg flex-grow">
+                    <p className="text-white/90 mb-6 leading-relaxed text-base md:text-lg flex-grow">
                       "{testimonial.quote}"
                     </p>
                     <div className="mt-auto">
-                      <p className="font-bold text-foreground">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground mt-1">{testimonial.role}</p>
+                      <p className="font-bold text-white">{testimonial.author}</p>
+                      <p className="text-sm text-white mt-1">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>

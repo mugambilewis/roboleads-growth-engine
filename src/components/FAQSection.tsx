@@ -32,7 +32,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative overflow-hidden bg-[#092C5D]">
+    <section className="py-24 md:py-32 relative overflow-hidden bg-[#092C5D]">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-60 transform -translate-x-16 -translate-y-16"></div>

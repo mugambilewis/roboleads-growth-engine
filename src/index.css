@@ -8,85 +8,90 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Deep navy/black background theme */
-    --background: 230 60% 8%;
-    --foreground: 0 0% 98%;
+    /* Brand colors - matching AboutUs component */
+    --background: 212 82% 95%; /* #e8f1fd - soft light blue */
+    --foreground: 212 82% 20%; /* #092C5D - deep navy text */
 
-    --card: 230 50% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%; /* white cards */
+    --card-foreground: 212 82% 20%;
 
-    --popover: 230 50% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 82% 20%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 174 100% 35%; /* #00B3A4 - vibrant teal accent */
+    --primary-foreground: 212 82% 20%; /* navy text on teal */
 
-    --secondary: 271 70% 65%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 212 70% 88%; /* lighter blue variation */
+    --secondary-foreground: 212 82% 20%;
 
-    --muted: 230 40% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 212 50% 92%;
+    --muted-foreground: 212 40% 45%;
 
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 174 100% 35%; /* teal accent */
+    --accent-foreground: 212 82% 20%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 230 40% 20%;
-    --input: 230 40% 20%;
-    --ring: 217 91% 60%;
+    --border: 212 50% 85%;
+    --input: 212 50% 90%;
+    --ring: 174 100% 35%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom gradient stops */
-    --gradient-start: 217 91% 60%;
-    --gradient-mid: 271 70% 65%;
-    --gradient-end: 330 80% 60%;
+    /* Custom gradients and effects */
+    --gradient-hero: linear-gradient(135deg, hsl(212, 82%, 95%) 0%, hsl(0, 0%, 100%) 100%);
+    --glow-teal: 0 8px 32px hsl(174 100% 35% / 0.2);
+    --shadow-soft: 0 4px 20px hsl(212 82% 20% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(212 82% 20% / 0.12);
 
-    /* Glow effects */
-    --glow-blue: 217 91% 60%;
-    --glow-purple: 271 70% 65%;
-    --glow-pink: 330 80% 60%;
-
-    --sidebar-background: 230 55% 10%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 45% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 230 40% 20%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 230 60% 8%;
-    --foreground: 0 0% 98%;
-    --card: 230 50% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 230 50% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 271 70% 65%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 230 40% 20%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 230 40% 20%;
-    --input: 230 40% 20%;
-    --ring: 217 91% 60%;
-    --sidebar-background: 230 55% 10%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 217 91% 60%;
+    --background: 212 82% 12%;
+    --foreground: 212 20% 95%;
+
+    --card: 212 70% 15%;
+    --card-foreground: 212 20% 95%;
+
+    --popover: 212 70% 15%;
+    --popover-foreground: 212 20% 95%;
+
+    --primary: 174 100% 45%;
+    --primary-foreground: 212 82% 12%;
+
+    --secondary: 212 50% 22%;
+    --secondary-foreground: 212 20% 95%;
+
+    --muted: 212 50% 20%;
+    --muted-foreground: 212 30% 65%;
+
+    --accent: 174 100% 45%;
+    --accent-foreground: 212 82% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 212 50% 25%;
+    --input: 212 50% 25%;
+    --ring: 174 100% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 45% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 230 40% 20%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -97,100 +102,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
-    color: hsl(var(--foreground));
-  }
-}
-
-@layer utilities {
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent;
-  }
-
-  .gradient-border {
-    position: relative;
-    background: hsl(var(--card));
-    border-radius: var(--radius);
-  }
-
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: var(--radius);
-    padding: 2px;
-    background: linear-gradient(135deg, 
-      hsl(var(--gradient-start)), 
-      hsl(var(--gradient-mid)), 
-      hsl(var(--gradient-end))
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-
-  .glow-effect {
-    box-shadow: 
-      0 0 20px hsl(var(--glow-blue) / 0.3),
-      0 0 40px hsl(var(--glow-purple) / 0.2);
-  }
-
-  .animated-gradient {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--gradient-start)),
-      hsl(var(--gradient-mid)),
-      hsl(var(--gradient-end))
-    );
-    background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
-  }
-
-  /* Marquee animation for trust bar */
-  .animate-marquee {
-    animation: marquee-scroll 20s linear infinite;
-  }
-
-  @keyframes marquee-scroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  @keyframes gradient-shift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out forwards;
-  }
-
-  .glass-card {
-    background: hsl(var(--card) / 0.4);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--border) / 0.3);
   }
 }

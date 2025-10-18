@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <section id="about" className="py-24 md:py-32 bg-[#e8f1fd]">
       <div className="container mx-auto px-8">
@@ -29,7 +31,8 @@ const AboutUs = () => {
               </div>
 
               <div className="pt-4">
-                <Button className="bg-[#00B3A4] hover:bg-[#00B3A4] /90 text-[#092C5D] font-bold px-8 py-3 rounded-lg">
+                <Button className="bg-[#00B3A4] hover:bg-[#00B3A4] /90 text-[#092C5D] font-bold px-8 py-3 rounded-lg"
+                 onClick={() => navigate('/more-about-us')}>
                   MORE ABOUT US
                 </Button>
               </div>
