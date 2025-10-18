@@ -2,10 +2,49 @@ import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+
+
+
 const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const phrases = [
+    "automating your business with AI.",
+    "generating leads 24/7.",
+    "ranking higher on Google.",
+    "effortless lead capture and sales.",
+    "a stunning, mobile-friendly website."
+  ];
+
+  useEffect(() => {
+    const typingSpeed = isDeleting ? 50 : 100;
+    const currentPhrase = phrases[currentIndex];
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (currentText.length < currentPhrase.length) {
+          setCurrentText(currentPhrase.slice(0, currentText.length + 1));
+        } else {
+          // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting
+        if (currentText.length > 0) {
+          setCurrentText(currentText.slice(0, -1));
+        } else {
+          setIsDeleting(false);
+          setCurrentIndex((currentIndex + 1) % phrases.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, currentIndex, phrases]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -53,11 +92,16 @@ const Hero = () => {
                 <div className="space-y-6">
                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-2xl">
                     <div className="mb-2">You're one step away from</div>
-                    <div className="text-[#00B3A4] animate-pulse">Business Transformation</div>
+                    <div className="text-[#00B3A4] min-h-[1.2em] flex items-center justify-center">
+                      <span className="text-2xl md:text-3xl lg:text-4xl">
+                        {currentText}
+                        <span className="animate-pulse">|</span>
+                      </span>
+                    </div>
                   </h1>
                   
                   <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 drop-shadow-lg font-light">
-                    Transforming your business into a 24/7 growth machine with AI-powered automation, seamless lead generation, and a high-performing, mobile-friendly website that ranks and converts effortlessly.
+                    Transform your business into a 24/7 growth machine with AI-powered automation, seamless lead generation, and a high-performing, mobile-friendly website that ranks and converts effortlessly.
                   </p>
                 </div>
                 
