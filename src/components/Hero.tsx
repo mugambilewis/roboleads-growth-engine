@@ -12,11 +12,11 @@ const Hero = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const phrases = [
-    "automating your business with AI.",
-    "generating leads 24/7.",
-    "ranking higher on Google.",
-    "effortless lead capture and sales.",
-    "a stunning, mobile-friendly website."
+    "tripling your monthly website traffic with AI-powered SEO.",
+    "ranking #1 on Google for your highest-value keywords.",
+    "generating 4x more qualified leads through smart automation.",
+    "turning clicks into conversions with high-performance UX.",
+    "building a 24/7 growth engine fueled by data and strategy."
   ];
 
   useEffect(() => {
@@ -85,9 +85,12 @@ const Hero = () => {
                       </span>
                     </div>
                   </h1>
-                  
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90 drop-shadow-lg">
+                  Most businesses lose 80% of traffic because of broken funnels and outdated websites.
+                  </h2>
                   <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 drop-shadow-lg font-light">
-                    Transform your business into a 24/7 growth machine with AI-powered automation, seamless lead generation, and a high-performing, mobile-friendly website that ranks and converts effortlessly.
+                   We fix that. With AI-fueled lead systems, real-time analytics, and a UX that converts, Roboleads turns your website into a non-stop sales machine.
+
                   </p>
                 </div>
                 
