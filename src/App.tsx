@@ -18,6 +18,7 @@ import LeadCapturing from "./pages/services/LeadCapturing";
 import AutomationAI from "./pages/services/AutomationAI";
 import BeautifulWebDesign from "./pages/services/BeautifulWebDesign";
 import MobileAppManageable from "./pages/services/MobileAppManageable";
+import ScrollToTop from "./ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Index />} />

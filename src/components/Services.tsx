@@ -77,12 +77,7 @@ const Services = () => {
                   <p className="text-base md:text-lg text-[#092C5D] leading-relaxed mt-4">
                     {service.description}
                   </p>
-                  <div className="mt-6">
-                    <button className="inline-flex items-center px-6 py-3 bg-[#00B3A4] text-white font-semibold rounded-lg hover:bg-[#009e97] transition">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  </div>
+                  
                 </div>
               </div>
             );

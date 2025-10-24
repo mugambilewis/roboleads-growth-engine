@@ -59,7 +59,7 @@ const SEO = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-[#092C5D] text-center mb-12">
               How We Elevate Your Online Presence
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -73,7 +73,7 @@ const SEO = () => {
                 >
                   <feature.icon className="w-12 h-12 text-accent mb-4" />
                   <h3 className="text-xl font-semibold text-primary mb-3">{feature.title}</h3>
-                  <p className="text-primary/70">{feature.description}</p>
+                  <p className="text-[#092C5D]/90">{feature.description}</p>
                 </motion.div>
               ))}
             </div>

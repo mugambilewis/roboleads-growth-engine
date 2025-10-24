@@ -73,7 +73,7 @@ const AutomationAI = () => {
                 >
                   <feature.icon className="w-12 h-12 text-accent mb-4" />
                   <h3 className="text-xl font-semibold text-primary mb-3">{feature.title}</h3>
-                  <p className="text-[#092C5D]/70">{feature.description}</p>
+                  <p className="text-[#092C5D]/90">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
