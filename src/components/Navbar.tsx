@@ -73,63 +73,7 @@ const Navbar = () => {
               ABOUT US
             </a>
             
-            {/* Dropdown Menu */}
-            <div className="relative">
-              <button
-                className="text-sm font-medium transition-colors hover:opacity-80 flex items-center gap-1"
-                style={{ color: '#092C5D' }}
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                onMouseEnter={() => setIsDropdownOpen(true)}
-              >
-                RESOURCES
-                <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-56 rounded-md shadow-lg overflow-hidden"
-                  style={{ backgroundColor: '#092C5D' }}
-                  onMouseLeave={() => setIsDropdownOpen(false)}
-                >
-                  <Link
-                    to="/community"
-                    className="flex items-center gap-3 px-4 py-3 text-white text-sm hover:bg-opacity-90 transition-colors"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <span className="text-lg">👥</span>
-                    <span className="font-medium">Community</span>
-                  </Link>
-                  <Link
-                    to="/support"
-                    className="flex items-center gap-3 px-4 py-3 text-white text-sm hover:bg-opacity-90 transition-colors"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <span className="text-lg">🎧</span>
-                    <span className="font-medium">Support</span>
-                  </Link>
-                  <Link
-                    to="/library"
-                    className="flex items-center gap-3 px-4 py-3 text-white text-sm hover:bg-opacity-90 transition-colors"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <span className="text-lg">📚</span>
-                    <span className="font-medium">Questions Library</span>
-                  </Link>
-                  <Link
-                    to="/docs"
-                    className="flex items-center gap-3 px-4 py-3 text-white text-sm hover:bg-opacity-90 transition-colors"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <span className="text-lg">📄</span>
-                    <span className="font-medium">Documentation</span>
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            
-
-           <Link
+            <Link
               to="/contact"
               className="text-sm font-medium transition-colors hover:opacity-80"
               style={{ color: '#092C5D' }}
