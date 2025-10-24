@@ -74,6 +74,10 @@ export default {
         'heading-4': ['1.25rem', { lineHeight: '1.4', letterSpacing: '0' }], // 20px
         'heading-5': ['1.125rem', { lineHeight: '1.4', letterSpacing: '0' }], // 18px
         'heading-6': ['1rem', { lineHeight: '1.5', letterSpacing: '0' }], // 16px
+        'body-large': ['1.125rem', { lineHeight: '1.6', letterSpacing: '0' }], // 18px
+        'body': ['1rem', { lineHeight: '1.6', letterSpacing: '0' }], // 16px
+        'body-small': ['0.875rem', { lineHeight: '1.5', letterSpacing: '0' }], // 14px
+        'caption': ['0.75rem', { lineHeight: '1.4', letterSpacing: '0' }], // 12px
       },
       keyframes: {
         "accordion-down": {

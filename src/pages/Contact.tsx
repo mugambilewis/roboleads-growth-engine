@@ -69,7 +69,7 @@ const Contact = () => {
             <br />
             <span className="text-primary">Great Together</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-large sm:text-body-large text-muted-foreground max-w-2xl mx-auto">
             Get in touch — we'd love to hear from you.
           </p>
         </div>

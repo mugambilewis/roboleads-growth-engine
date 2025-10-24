@@ -49,12 +49,12 @@ const WhyChooseUs = () => {
                   WHY CHOOSE A{" "}
                   <span className="text-[#00B3A4]">SMART WEBSITE?</span>
                 </h2>
-                <p className="text-lg text-white mb-4">
+                <p className="text-body-small text-white mb-4">
                   Traditional websites are outdated. Smart Websites are the future.
                 </p>
               </div>
 
-              <p className="text-base text-white leading-relaxed mb-6">
+              <p className="text-body text-white leading-relaxed mb-6">
                 A regular website just sits there. A Smart Website works for you, helping you attract leads, automate tasks, and grow your business without extra effort.
               </p>
 

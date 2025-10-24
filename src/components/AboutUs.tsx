@@ -15,17 +15,17 @@ const AboutUs = () => {
                 <h2 className="text-heading-1 md:text-heading-1 font-bold mb-3 text-[#092C5D]">
                   WHO WE ARE
                 </h2>
-                <p className="text-lg text-[#092C5D] mb-4">
+                <p className="text-body-small text-[#092C5D] mb-4">
                   Building the Future of Smart Websites
                 </p>
               </div>
 
               <div className="space-y-3">
-                <p className="text-base text-[#092C5D]/80 leading-relaxed">
+                <p className="text-body text-[#092C5D]/80 leading-relaxed">
                   At Roboleads, we specialize in creating AI-powered, SEO-optimized, and automation-driven websites that work for you 24/7. We believe that a website should be more than just an online presence—it should be a powerful business tool that attracts leads, automates processes, and drives revenue effortlessly.
                 </p>
                 
-                <p className="text-base text-[#092C5D]/80 leading-relaxed">
+                <p className="text-body text-[#092C5D]/80 leading-relaxed">
                   With years of experience in web design, digital marketing, and AI automation, our team is dedicated to helping businesses scale online without the hassle of traditional web development.
                 </p>
               </div>
