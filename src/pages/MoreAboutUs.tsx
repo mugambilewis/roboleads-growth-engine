@@ -18,7 +18,7 @@ const MoreAboutUs = () => {
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-heading-1 sm:text-heading-1 lg:text-heading-1 font-bold text-foreground mb-6 leading-tight">
             Driven by Innovation,
             <br />
             <span className="text-primary">Defined by Results</span>
@@ -34,7 +34,7 @@ const MoreAboutUs = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-heading-2 sm:text-heading-2 font-bold text-foreground mb-4">
               Our Mission
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const MoreAboutUs = () => {
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                   <item.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">
+                <h3 className="text-heading-3 font-bold text-foreground mb-3">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -99,7 +99,7 @@ const MoreAboutUs = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-up">
-              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-heading-2 sm:text-heading-2 font-bold text-foreground mb-6">
                 Our Story
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -131,7 +131,7 @@ const MoreAboutUs = () => {
                   key={index}
                   className="p-8 text-center bg-gradient-to-br from-card to-secondary/20 hover:shadow-[var(--glow-teal)] transition-all duration-300"
                 >
-                  <div className="text-4xl font-bold text-primary mb-2">
+                  <div className="text-heading-2 font-bold text-primary mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground font-medium">
@@ -148,7 +148,7 @@ const MoreAboutUs = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <Card className="p-12 bg-gradient-to-br from-primary/5 to-secondary/10 border-primary/20">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-heading-2 sm:text-heading-2 font-bold text-foreground mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">

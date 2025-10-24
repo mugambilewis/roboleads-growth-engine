@@ -26,7 +26,7 @@ const Testimonials = () => {
     <section className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#092C5D]">
+          <h2 className="text-heading-2 md:text-heading-1 font-bold mb-6 text-[#092C5D]">
             What Our <span className="text-[#00B3A4]">Clients Say</span>
           </h2>
         </div>

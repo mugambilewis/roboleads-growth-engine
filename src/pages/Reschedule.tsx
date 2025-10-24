@@ -86,7 +86,7 @@ const Reschedule = () => {
               >
                 <Clock className="w-10 h-10 text-accent" />
               </motion.div>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h1 className="text-heading-1 md:text-heading-1 font-bold text-foreground mb-4">
                 Need to Reschedule?
               </h1>
               <p className="text-lg text-foreground/80">

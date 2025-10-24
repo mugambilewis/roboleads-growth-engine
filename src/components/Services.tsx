@@ -33,7 +33,7 @@ const Services = () => {
     <section id="services" className="py-16 md:py-24 lg:py-32 relative bg-white">
       <div className="container mx-auto px-6 md:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-[#092C5D]">
+          <h2 className="text-heading-1 md:text-heading-1 lg:text-heading-1 font-bold mb-4 md:mb-6 text-[#092C5D]">
             Smart Websites for Businesses
           </h2>
           <p className="text-base md:text-lg text-[#092C5D] max-w-4xl mx-auto leading-relaxed">
@@ -68,7 +68,7 @@ const Services = () => {
                 <div className={isEven ? 'md:order-2' : 'md:order-1'}>
                   {/* Title - Desktop Only */}
                   <div className="hidden md:block">
-                    <h3 className="text-3xl font-semibold  text-[#092C5D]">
+                    <h3 className="text-heading-3 font-semibold  text-[#092C5D]">
                       {service.title}
                     </h3>
                     

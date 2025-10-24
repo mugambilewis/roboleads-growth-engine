@@ -99,7 +99,7 @@ const ConsultationDetails = () => {
               >
                 <Calendar className="w-8 h-8 text-accent" />
               </motion.div>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h1 className="text-heading-1 md:text-heading-1 font-bold text-foreground mb-4">
                 Your Consultation Details
               </h1>
               <p className="text-lg text-foreground/80">

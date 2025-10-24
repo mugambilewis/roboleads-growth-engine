@@ -67,6 +67,14 @@ export default {
         'space-grotesk': ['Space Grotesk', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
       },
+      fontSize: {
+        'heading-1': ['2.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }], // 40px
+        'heading-2': ['2rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }], // 32px
+        'heading-3': ['1.5rem', { lineHeight: '1.3', letterSpacing: '0' }], // 24px
+        'heading-4': ['1.25rem', { lineHeight: '1.4', letterSpacing: '0' }], // 20px
+        'heading-5': ['1.125rem', { lineHeight: '1.4', letterSpacing: '0' }], // 18px
+        'heading-6': ['1rem', { lineHeight: '1.5', letterSpacing: '0' }], // 16px
+      },
       keyframes: {
         "accordion-down": {
           from: {

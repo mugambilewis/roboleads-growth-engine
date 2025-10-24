@@ -99,7 +99,7 @@ const BookAppointment = () => {
               >
                 <Calendar className="w-8 h-8 text-accent" />
               </motion.div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-heading-1 md:text-heading-1 lg:text-heading-1 font-bold text-foreground mb-6">
                 Book Your Free Strategy Session
               </h1>
               <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">

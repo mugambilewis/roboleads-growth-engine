@@ -76,16 +76,16 @@ const Hero = () => {
                 
                 {/* Headline with elegant styling */}
                 <div className="space-y-6">
-                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-2xl">
+                  <h1 className="text-heading-1 md:text-heading-1 lg:text-heading-1 font-bold leading-tight text-white drop-shadow-2xl">
                     <div className="mb-2">You're one step away from</div>
                     <div className="text-[#00B3A4] min-h-[1.2em] flex items-center justify-center">
-                      <span className="text-2xl md:text-3xl lg:text-4xl">
+                      <span className="text-heading-2 md:text-heading-2 lg:text-heading-2">
                         {currentText}
                         <span className="animate-pulse">|</span>
                       </span>
                     </div>
                   </h1>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90 drop-shadow-lg">
+                  <h2 className="text-heading-3 md:text-heading-3 lg:text-heading-3 font-medium text-white/90 drop-shadow-lg">
                   Most businesses lose 80% of traffic because of broken funnels and outdated websites.
                   </h2>
                   <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 drop-shadow-lg font-light">

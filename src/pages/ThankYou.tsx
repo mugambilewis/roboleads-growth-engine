@@ -121,7 +121,7 @@ const ThankYou = () => {
             {/* Main Message */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
+              className="text-heading-1 md:text-heading-1 lg:text-heading-1 font-bold text-foreground mb-6"
             >
               Thank You for Booking!
             </motion.h1>
