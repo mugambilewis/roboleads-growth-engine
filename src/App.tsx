@@ -13,6 +13,11 @@ import BookAppointment from "./pages/BookAppointment";
 import ThankYou from "./pages/ThankYou";
 import Reschedule from "./pages/Reschedule";
 import ConsultationDetails from "./pages/ConsultationDetails";
+import SEO from "./pages/services/SEO";
+import LeadCapturing from "./pages/services/LeadCapturing";
+import AutomationAI from "./pages/services/AutomationAI";
+import BeautifulWebDesign from "./pages/services/BeautifulWebDesign";
+import MobileAppManageable from "./pages/services/MobileAppManageable";
 
 const queryClient = new QueryClient();
 
@@ -28,10 +33,15 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/more-about-us" element={<MoreAboutUs />} />
             <Route path="/contact" element={<Contact />} />
-             <Route path="/book-appointment" element={<BookAppointment />} />
-        <Route path="/thank-you" element={<ThankYou />} />
-        <Route path="/reschedule" element={<Reschedule />} />
-        <Route path="/consultation-details" element={<ConsultationDetails />} />
+            <Route path="/book-appointment" element={<BookAppointment />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/reschedule" element={<Reschedule />} />
+            <Route path="/consultation-details" element={<ConsultationDetails />} />
+            <Route path="/services/seo" element={<SEO />} />
+            <Route path="/services/lead-capturing" element={<LeadCapturing />} />
+            <Route path="/services/automation-ai" element={<AutomationAI />} />
+            <Route path="/services/beautiful-web-design" element={<BeautifulWebDesign />} />
+            <Route path="/services/mobile-app-manageable" element={<MobileAppManageable />} />
 
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
