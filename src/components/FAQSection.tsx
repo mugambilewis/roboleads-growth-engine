@@ -45,7 +45,7 @@ const FAQSection = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div>
             <p className="text-[#00B3A4] text-sm mb-2">About Us</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-heading-1 md:text-heading-1 font-bold text-white mb-4">
               Smart Websites, Smarter Growth
             </h2>
             <p className="text-xl text-white leading-relaxed">

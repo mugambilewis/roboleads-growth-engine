@@ -7,7 +7,7 @@ const ReadyToBegin = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Heading with Stylized "BEGIN?" */}
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#092C5D]">
+            <h2 className="text-heading-1 md:text-heading-1 lg:text-heading-1 font-bold text-[#092C5D]">
               READY TO
               <span className="text-[#00B3A4]"> BEGIN?</span>
             </h2>

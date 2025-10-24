@@ -52,7 +52,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold text-[#00B3A4] mb-4 tracking-tight">
+          <h1 className="text-heading-1 md:text-heading-1 font-bold text-[#00B3A4] mb-4 tracking-tight">
             Our Flexible Pricing Options
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto">

@@ -39,7 +39,7 @@ const LeadCapturing = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-heading-1 md:text-heading-1 font-bold text-primary mb-6">
               Turn Visitors into Loyal Customers
             </h1>
             <p className="text-xl text-primary/80 mb-8 max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ const LeadCapturing = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#092C5D] text-center mb-12">
+            <h2 className="text-heading-2 md:text-heading-2 font-bold text-[#092C5D] text-center mb-12">
               Our Conversion Solutions
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -89,7 +89,7 @@ const LeadCapturing = () => {
             <p className="text-2xl text-primary/90 mb-8 font-medium">
               Stop losing leads. Start capturing growth today.
             </p>
-            <h3 className="text-3xl font-bold text-primary mb-6">Ready to grow faster?</h3>
+            <h3 className="text-heading-2 font-bold text-primary mb-6">Ready to grow faster?</h3>
             <Link to="/book-appointment">
               <Button size="lg" className="bg-accent text-white hover:bg-accent/90 text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 Book Appointment

@@ -64,7 +64,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-heading-1 sm:text-heading-1 lg:text-heading-1 font-bold text-foreground mb-6 leading-tight">
             Let's Build Something
             <br />
             <span className="text-primary">Great Together</span>
@@ -157,7 +157,7 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-foreground mb-6">
+                <h3 className="text-heading-3 font-bold text-foreground mb-6">
                   Get in Touch
                 </h3>
 
