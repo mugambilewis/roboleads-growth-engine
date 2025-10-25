@@ -24,7 +24,7 @@ const BeautifulWebDesign = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen" style={{ backgroundColor: '#e8f1fd' }}>
         <div className="container mx-auto px-4 py-8 max-w-6xl">
           <Breadcrumb items={[
             { label: "Home", href: "/" },
@@ -39,14 +39,46 @@ const BeautifulWebDesign = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-heading-1 md:text-heading-1 font-bold text-primary mb-6">
+            <h1 className="text-heading-1 md:text-heading-1 font-bold mb-6" style={{ color: '#092c5d' }}>
               Modern Websites That Convert
             </h1>
-            <p className="text-xl text-primary/80 mb-8 max-w-3xl mx-auto">
-              Beautiful, responsive, and high-performance web design.
-            </p>
+            
+            {/* Image Section */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=600&fit=crop" 
+                alt="Beautiful modern web design showcase" 
+                className="w-full h-auto object-cover"
+              />
+            </motion.div>
+
+             <h2 className="text-xl md:text-2xl font-semibold text-center mb-8 max-w-3xl mx-auto leading-snug"
+  style={{ color: '#092c5d'}}>
+Modern, Responsive, and Conversion-Focused Websites
+            </h2>
+
+            {/* Paragraph Section */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-justify"
+  style={{ color: '#092c5d' }}
+
+            >
+              Establishing your digital identity starts with a foundational piece: your website. It functions as the virtual counterpart to the physical business space you know and recognize, and because of that, creating a powerful initial impact on your audience is as essential as it is in the tangible world. Embracing this fundamental concept, our expertise lies in fashioning aesthetically pleasing, high-functioning websites tailored to not just draw the attention of those who visit but also to captivate and immerse them in a meaningful interaction. Our intention is to foster a connection that propels them towards actions that culminate in successful conversions.
+<br /><br />
+We offer a suite of detailed design services that integrate a plethora of elements carefully chosen and skillfully combined, aiming to provide an outstanding and seamless user experience on your website. Whether it's through the careful curation of visual content, the strategic structuring of user interfaces, or the technical underpinnings that ensure quick load times and responsive design, we focus our efforts on every facet to ensure that your online representation stands out in the digital marketplace. The result is a well-coordinated symphony of design elements working in harmony to present your brand in the best possible light.
+            </motion.p>
+
+           
             <Link to="/book-appointment">
-              <Button size="lg" className="bg-accent text-white hover:bg-accent/90 text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+              <Button size="lg" className="text-white hover:opacity-90 text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105" style={{ backgroundColor: '#00B3A4' }}>
                 Book Appointment
               </Button>
             </Link>
@@ -59,7 +91,7 @@ const BeautifulWebDesign = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-heading-2 md:text-heading-2 font-bold text-[#092C5D] text-center mb-12">
+            <h2 className="text-heading-2 md:text-heading-2 font-bold text-center mb-12" style={{ color: '#092c5d' }}>
               What Makes Our Sites Stand Out
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -69,11 +101,11 @@ const BeautifulWebDesign = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
                 >
-                  <feature.icon className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="text-xl font-semibold text-primary mb-3">{feature.title}</h3>
-                  <p className="text-[#092C5D]/90">{feature.description}</p>
+                  <feature.icon className="w-12 h-12 mb-4" style={{ color: '#00B3A4' }} />
+                  <h3 className="text-xl font-semibold mb-3" style={{ color: '#092c5d' }}>{feature.title}</h3>
+                  <p style={{ color: '#092c5d', opacity: 0.9 }}>{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -84,14 +116,15 @@ const BeautifulWebDesign = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-to-br from-accent/10 to-primary/5 p-12 rounded-3xl text-center"
+            className="p-12 rounded-3xl text-center"
+            style={{ background: 'linear-gradient(to bottom right, rgba(0, 179, 164, 0.1), rgba(9, 44, 93, 0.05))' }}
           >
-            <p className="text-2xl text-primary/90 mb-8 font-medium">
+            <p className="text-2xl mb-8 font-medium" style={{ color: '#092c5d', opacity: 0.9 }}>
               Your website is your best salesperson. Let it shine.
             </p>
-            <h3 className="text-heading-2 font-bold text-primary mb-6">Ready to grow faster?</h3>
+            <h3 className="text-heading-2 font-bold mb-6" style={{ color: '#092c5d' }}>Ready to grow faster?</h3>
             <Link to="/book-appointment">
-              <Button size="lg" className="bg-accent text-white hover:bg-accent/90 text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+              <Button size="lg" className="text-white hover:opacity-90 text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105" style={{ backgroundColor: '#00B3A4' }}>
                 Book Appointment
               </Button>
             </Link>

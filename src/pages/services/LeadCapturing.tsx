@@ -24,7 +24,7 @@ const LeadCapturing = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen" style={{ backgroundColor: '#e8f1fd' }}>
         <div className="container mx-auto px-4 py-8 max-w-6xl">
           <Breadcrumb items={[
             { label: "Home", href: "/" },
@@ -39,14 +39,46 @@ const LeadCapturing = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-heading-1 md:text-heading-1 font-bold text-primary mb-6">
+            <h1 className="text-heading-1 md:text-heading-1 font-bold mb-6" style={{ color: '#092c5d' }}>
               Turn Visitors into Loyal Customers
             </h1>
-            <p className="text-xl text-primary/80 mb-8 max-w-3xl mx-auto">
+
+            {/* Image Section */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop" 
+                alt="Lead capturing and conversion optimization" 
+                className="w-full h-auto object-cover"
+              />
+            </motion.div>
+
+             <h2 className="text-xl md:text-2xl font-semibold text-center mb-8 max-w-3xl mx-auto leading-snug"
+  style={{ color: '#092c5d'}}>
               Powerful tools to capture and nurture leads that convert.
-            </p>
+            </h2>
+
+            {/* Paragraph Section */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-justify"
+  style={{ color: '#092c5d' }}
+
+            >
+             Attracting visitors to your site is just the beginning of the journey; the crucial part lies in transforming those site visitors into loyal customers. Our specialized lead capturing solutions are crafted with precision to assist businesses in reaching the pinnacle of their capabilities by leveraging innovative and effective strategies. We focus on the overarching goal of not only drawing attention to your brand but on nurturing visitor engagement in a way that leads to a concrete increase in sales conversions.
+<br /><br />
+Our system is fine-tuned to identify the most promising prospects for your business and guide them through a tailored conversion funnel. Employing the latest tools and techniques, our solutions are adept at securing the interest of potential clients and compelling them to take action that aligns with your business objectives. By doing so, we ensure that you're not merely gathering traffic, but you're building a solid foundation of customers who will contribute to the sustained growth and success of your enterprise.
+            </motion.p>
+
+            
             <Link to="/book-appointment">
-              <Button size="lg" className="bg-accent text-white hover:bg-accent/90 text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+              <Button size="lg" className="text-white hover:opacity-90 text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105" style={{ backgroundColor: '#00B3A4' }}>
                 Book Appointment
               </Button>
             </Link>
@@ -59,7 +91,7 @@ const LeadCapturing = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <h2 className="text-heading-2 md:text-heading-2 font-bold text-[#092C5D] text-center mb-12">
+            <h2 className="text-heading-2 md:text-heading-2 font-bold text-center mb-12" style={{ color: '#092c5d' }}>
               Our Conversion Solutions
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -69,11 +101,11 @@ const LeadCapturing = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
                 >
-                  <feature.icon className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="text-xl font-semibold text-primary mb-3">{feature.title}</h3>
-                  <p className="text-[#092C5D]/90">{feature.description}</p>
+                  <feature.icon className="w-12 h-12 mb-4" style={{ color: '#00B3A4' }} />
+                  <h3 className="text-xl font-semibold mb-3" style={{ color: '#092c5d' }}>{feature.title}</h3>
+                  <p style={{ color: '#092c5d', opacity: 0.9 }}>{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -84,14 +116,15 @@ const LeadCapturing = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-to-br from-accent/10 to-primary/5 p-12 rounded-3xl text-center"
+            className="p-12 rounded-3xl text-center"
+            style={{ background: 'linear-gradient(to bottom right, rgba(0, 179, 164, 0.1), rgba(9, 44, 93, 0.05))' }}
           >
-            <p className="text-2xl text-primary/90 mb-8 font-medium">
+            <p className="text-2xl mb-8 font-medium" style={{ color: '#092c5d', opacity: 0.9 }}>
               Stop losing leads. Start capturing growth today.
             </p>
-            <h3 className="text-heading-2 font-bold text-primary mb-6">Ready to grow faster?</h3>
+            <h3 className="text-heading-2 font-bold mb-6" style={{ color: '#092c5d' }}>Ready to grow faster?</h3>
             <Link to="/book-appointment">
-              <Button size="lg" className="bg-accent text-white hover:bg-accent/90 text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+              <Button size="lg" className="text-white hover:opacity-90 text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105" style={{ backgroundColor: '#00B3A4' }}>
                 Book Appointment
               </Button>
             </Link>
